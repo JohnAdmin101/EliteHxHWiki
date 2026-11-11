@@ -1,0 +1,17 @@
+{
+  "nen_ability.examplenenaddon.spark_fist": "Spark Fist",
+  "nen_ability.examplenenaddon.spark_fist.desc": "For ten seconds, or three hits, every punch also strikes with a spark of Nen.",
+  "nen_ability.examplenenaddon.spark_burst": "Spark Burst",
+  "nen_ability.examplenenaddon.spark_burst.desc": "Hold to charge, then let go: a burst of Nen hurts everything near you, harder the longer you held.",
+  "nen_ability.examplenenaddon.spark_hound": "Spark Hound",
+  "nen_ability.examplenenaddon.spark_hound.desc": "Loose a fast wisp of Nen that follows and fights for you for thirty seconds. Press again to call it off.",
+  "nen_vow.examplenenaddon.spark_offering": "Spark Offering",
+  "nen_vow.examplenenaddon.spark_offering.desc": "Each use of Spark Fist costs one glowstone dust. Using it without the dust breaks the vow.",
+  "nen_imprint.examplenenaddon.marked": "Marked",
+  "nen_imprint.examplenenaddon.marked.desc": "Worn as armor, it makes you a little faster for every grade.",
+  "nen_hunter_specialty.examplenenaddon.map_maker": "Map Maker",
+  "nen_geas_term.examplenenaddon.no_sprint": "No Sprint",
+  "nen_geas_term.examplenenaddon.no_sprint.desc": "The bound player may not sprint.",
+  "nen_hatsu_component.examplenenaddon.long_reach": "Long Reach",
+  "nen_hatsu_component.examplenenaddon.long_reach.desc": "Reaches half as far again."
+}

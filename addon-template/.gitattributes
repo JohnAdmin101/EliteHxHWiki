@@ -1,0 +1,5 @@
+# Line endings for an addon built from this template, whatever the checkout settings: the wrapper script must keep
+# LF to run on Linux and macOS, the batch file CRLF, and the wrapper jar is binary.
+/gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary

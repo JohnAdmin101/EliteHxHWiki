@@ -1,0 +1,31 @@
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+description='''
+An example addon for Elite Hunter X Hunter: one ability, one vow and their client visuals.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# Elite Hunter X Hunter. Until its 1.0.0 any minor version may break the API, so pin the exact 0.x version.
+[[dependencies.${mod_id}]]
+    modId="elitehxh"
+    type="required"
+    versionRange="${elitehxh_version_range}"
+    ordering="AFTER"
+    side="BOTH"
