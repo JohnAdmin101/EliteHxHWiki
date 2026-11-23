@@ -85,7 +85,7 @@ The King can describe the nation with `/nation describe <text>` (up to 120 chara
 
 ## Spawn and protected zones
 
-Server staff can mark areas, such as the spawn, as protected zones. A zone is not a nation: nobody can join it, it shows no claim limit and it is not in `/nation list`. Walking into one shows its name. By default nobody but staff can build there, players cannot fight, hostile mobs do not spawn and explosions and fire do nothing, but you can still use doors and buttons. Staff can change each rule per zone.
+Server staff can mark areas, such as the spawn, as protected zones. A zone is not a nation: nobody can join it, it shows no claim limit and it is not in `/nation list`. Walking into one shows its name. By default nobody but staff can build there, players cannot fight, hostile mobs do not spawn and explosions and fire do nothing, but you can still use doors and buttons. Staff can change each rule per zone. The commands are `/nation admin zone create <name>`, `delete <name>`, `flag <zone> ...` and `list`.
 
 ## Machines from other mods
 

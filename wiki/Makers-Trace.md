@@ -62,4 +62,4 @@ If the economy is off on the server, there is no stake and no Jenny, but the dee
 
 ## For server owners
 
-The `[trace]` table has `enabled` (true), `traceStudySeconds` (3), `traceStudyAura` (10), `traceHiddenSkill` (0.6), `traceStake` (50), `traceBaseJenny` (40), `traceFakeFee` (30), `traceHiddenFactor` (3), `traceScrapJenny` (5), `traceTreasureBuyer` (1.25), `traceDailyJenny` (600), `traceChestChance` (0.06), `traceBrushChance` (0.08), `traceVillagerOffer` (true) and `traceVillagerEmeralds` (6). See [Server Owners](Server-Owners).
+The `[trace]` table has `enabled` (true), `traceStudySeconds` (3), `traceStudyAura` (10), `traceHiddenSkill` (0.6), `traceStake` (50), `traceBaseJenny` (40), `traceFakeFee` (30), `traceHiddenFactor` (3), `traceScrapJenny` (5), `traceTreasureBuyer` (1.25), `traceDailyJenny` (600), `traceChestChance` (0.06), `traceBrushChance` (0.08), `traceVillagerOffer` (true) and `traceVillagerEmeralds` (6). Admins can use `/nen admin antique <item> [genuine|fake|hidden] [player]` to give an antique of a chosen truth. See [Server Owners](Server-Owners).

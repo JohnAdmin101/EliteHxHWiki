@@ -5,7 +5,7 @@ Elite HxH is built as a platform. Other mods, called addons, can add new Nen abi
 ## For players
 
 - An addon's abilities show up in the game like the built-in ones: in manuals (if the author put them in a type), on your ability bar and in the binding screen.
-- Addon techniques are not on the technique wheel. The wheel lists only Ten, Ken, Gyo, En and Zetsu. An addon technique has a key of its own, so look for it in Options, Controls.
+- Addon techniques are not on the technique wheel. The wheel lists only Ten, Ken, Ryu, Shu, Gyo, In, En and Zetsu. An addon technique has a key of its own, so look for it in Options, Controls.
 - The server owner can rebalance or turn off any addon ability in `abilities.toml`, the same way as the built-in ones.
 - If an addon crashes while you play, the mod switches that one ability off and the game carries on. See [FAQ and Troubleshooting](FAQ-and-Troubleshooting).
 - Install the addons on the server and on every client that joins.
@@ -24,11 +24,12 @@ Everything you need is in the mod's repository:
 A few things worth knowing before you start:
 
 - An addon compiles against the `elitehxh-api` jar only, and runs with the full mod.
-- Elite HxH requires GeckoLib, and so does a mod that depends on it.
+- Elite HxH requires GeckoLib and Curios API (and Player Animation Library on clients), and so does a mod that depends on it.
 - Your addon's advancements can sit in the mod's **Nen** tab by using `elitehxh:nen` as their parent.
 - Nations are readable from addons (who owns a chunk, ranks, relations, trusted players with `Nations.trustAt`, personal and zone nations, and `Nations.mayAct`, the same claim answer the mod uses) and fire events you can listen to or cancel. Code that changes blocks should ask `mayAct` first. Code that hurts an entity asks `mayAct` with `ClaimAction.HURT_ENTITY`, and code that hurts a player asks `Nations.mayHurt(attacker, victim)`, which follows the nation, relation and PvP rules.
 - An addon can add Nen beasts (see [Nen Beasts](Nen-Beasts)): extend `BeastAbility`, and give the beast a body made of a GeckoLib model, five animations and a texture named after its id. The guide's tenth section walks through it.
 - An addon can add a Hunter specialty (see [Hunter Exam](Hunter-Exam)): register a `HunterSpecialty` in the `NEN_HUNTER_SPECIALTY` registry, give it a name key, and credit it with `INenUser.addHunterDeed` or by listening to `HunterDeedEvent` and `HunterStarEvent`. It has no perks of its own and cannot grant a license. The guide's twelfth section walks through it.
+- The guide also covers a mob that carries aura (section 9), an imprint for [Infused Gear](Infused-Gear) (11), a Geas term (13), a Hatsu modifier (14), paying and charging Jenny (15) and Tower Arena events (16).
 - Do not ship official Hunter x Hunter art, audio or text. Use original assets and translation keys.
 
 ## Using the API

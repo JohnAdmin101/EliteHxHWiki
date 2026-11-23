@@ -23,6 +23,8 @@ The Level column is the Nen level that unlocks the technique. A server owner can
 
 Ten is your resting state. With no technique on at all, your aura leaks: it regenerates at half speed, and Nen hits on you do 1.5 times damage. Keep Ten on and you avoid both. You also need Ten on to use abilities.
 
+**Sleeping with Ten.** Sleep through a night with Ten on and no other technique, and you wake with 30 Nen XP and **Rested Ten**: aura regenerates a fifth faster for 20 minutes. Sleep through a night in Zetsu instead and you wake with full aura. Either reward comes once per game day, and only when the night is skipped. You get nothing while Nen Exhausted, in Nen Overuse, under Vow Lockout or Nen Severed.
+
 ### Zetsu
 
 Zetsu hides you. Other players cannot see your aura and the aura tier is hidden, and mobs have a harder time noticing you. The price is a heavy one: while sealed, Nen hits do double damage to you, and Zetsu cannot run with Ten, Ren, Gyo, Ken, En, Shu, In, Ryu or Ko. Turning Zetsu on switches off the toggles among them (Ten, Gyo, Ken, En, Shu, In and Ryu; Ko needs Ten or Ren, so it cannot start under Zetsu), but it will not turn on while you are holding Ren or charging Ko: let go first. Turning on Ten, Gyo, Ken, En, Shu or In, or starting Ren, switches Zetsu off. You cannot use abilities while it is on, because they need Ten. A player with Gyo can still spot you.
@@ -33,6 +35,12 @@ Hold the Ren key (**C** by default). It costs 10 aura to start and 4 aura per se
 
 Ren is not on the wheel. It is a hold, so it has its own key.
 
+**Killing intent.** From Nen level 20, Ren at full charge (or Ken) frightens much weaker things within 8 blocks. Walls do not stop it, and it costs nothing extra. Zetsu or In keeps it in.
+
+- A mob whose maximum health is no more than your Nen level drops its target and runs from you. A rogue Nen user runs if it is 15 or more levels below you.
+- Villagers, piglins and hoglins do not react. Neither do bosses (the Wither, the Ender Dragon, the Warden and the Elder Guardian) or Nen beasts.
+- A player 15 or more levels below you (a player who has not awakened counts as level 0) gets **Dread** for 2 seconds: 15% slower movement and a dark red edge on the screen. It only reaches players you could hit, and the same player gets it from you at most once every 10 seconds.
+
 ### Gyo
 
 Gyo costs 5 aura to start and 2 per second. While it is on you see:
@@ -41,6 +49,7 @@ Gyo costs 5 aura to start and 2 per second. While it is on you see:
 - Things made of aura that others cannot see, such as the conjured blades and shields, aura bolts and other effects of Nen users. Not the work of someone using In, unless you also have Ren on (see In below).
 - Players who are using In, under the same rules as Zetsu users. Without Gyo you see their aura as nothing.
 - The hidden marks of the Hatsu trial. See [Hatsu](Hatsu).
+- **Aura residue.** A Nen user leaves a faint trace where they use an ability, release Ko or deal Nen damage, and for 30 seconds after that they leave more as they move. Gyo shows it as dust in the color of their Nen type, for 5 minutes. Crouch and look at one within 5 blocks to read it on the action bar: the Nen type, how old it is and which way its maker was heading. It never names who left it. Nobody leaves residue in Zetsu.
 
 Your eyes glow while it is on, and Ten gives you a little less protection (5% instead of 10%) because some of your aura is in your eyes.
 

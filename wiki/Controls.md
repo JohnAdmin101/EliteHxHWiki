@@ -7,7 +7,7 @@ All of the mod's keys are in one place: Options, Controls, in the **Nen** catego
 | Action | Default | In the controls list | What it does |
 | --- | --- | --- | --- |
 | Status hub | N | Nen status screen | Opens the status hub. Works before you awaken too, and then it says how to awaken. |
-| Technique wheel | R | Technique wheel | Opens the wheel to switch Ten, Ken, Ryu, Gyo, In, En and Zetsu. Works once you are awakened. |
+| Technique wheel | R | Technique wheel | Opens the wheel to switch Ten, Ken, Ryu, Shu, Gyo, In, En and Zetsu. Works once you are awakened. |
 | Ren (hold) | C | Ren (hold) | Hold to flare your aura with Ren. Release to stop. |
 | Binding screen | K | Ability slots | Opens the screen where you bind abilities to slots, forget abilities and rename your Hatsu. |
 | Beast orders | H | Beast orders | Opens the beast order wheel, where you tell a Nen beast you have out what to do. Works for any living player in the world; if you have no beast, the server says so. See [Nen Beasts](Nen-Beasts). |
@@ -38,10 +38,12 @@ In creative mode, vanilla's save-hotbar key is also **C**. Rebind either one if 
 The hub is a tabbed screen: **Status**, **Types**, **Techniques**, **Abilities**, **Vows** and **Hatsu**. On the left is your own model, wearing your aura and following your mouse. On the right is the selected tab.
 
 - **Status** shows whether you are awakened, your type, level, an XP bar, an aura bar in your type's color and the techniques that are running.
-- **Techniques** lists all six, with what you have learned and what is on.
+- **Techniques** lists every technique, with what you have learned and what is on.
 - **Abilities** lists what you know, with mastery as a percentage of your cap, the slots, and your memory.
 - **Vows** lists the vows you hold, with warnings, breaks and waits.
 - **Hatsu** shows your signature, and explains how to forge one. Forging is done at a Meditation Stone, not here.
+
+The **Look** button, in the hub and on the binding screen, opens the look editor. There you choose how an ability's effects appear: a preset (eight ship with the mod, such as Ember Court and Storm Glass), a primary and an accent color or your Nen type's color, and shapes and ornaments. **Preview** shows it in the world to you alone, **Save** keeps it for that ability and **Reset** returns to the default. A look is cosmetic and never changes a hit. A server can turn looks off or hold colors to the type color.
 
 The hub only shows you things. It has buttons that open the binding screen, the vows screen and (on the Hatsu tab) the rename screen. Click a tab or press Ctrl+Tab and Ctrl+Shift+Tab to move between tabs. Scroll the rows with the mouse wheel when a list is long. It does not pause the game.
 

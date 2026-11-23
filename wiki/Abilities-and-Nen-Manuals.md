@@ -33,6 +33,8 @@ These are the starting values. A server owner can change them.
 | Bound Familiar | Conjuration | 40, plus 3.5 per second | 30 s | Summon a sturdy beast of your aura that guards you and draws hostile mobs. Press again to dismiss it. See [Nen Beasts](Nen-Beasts). |
 | Aura Hound | Emission | 35 | 60 s | Summon a fast beast of aura for 30 seconds. It costs nothing to keep and roams far. See [Nen Beasts](Nen-Beasts). |
 | Strung Beast | Manipulation | 30, plus 3 per second | 30 s | Summon a hard-hitting beast that attacks only what you hit or send it at. See [Nen Beasts](Nen-Beasts). |
+| Beast Bond | Manipulation | 30, plus 6 per second | 60 s | From Nen level 10. Win an aura contest against a wild Nen beast to tame it. See [Nen Beasts](Nen-Beasts). |
+| Binding Word | Specialization | Half of your maximum aura | 10 min | Given to every Specialist at Nen level 25; no manual teaches it. Offer a player within 6 blocks a Geas. See [Vows](Vows). |
 | Thief's Ledger | Specialization | 30 | 60 s | Strike a player (or a Rogue Nen User) to copy one of their abilities, picked at random, into the ledger's slot for 3 minutes. Hits on other mobs are ignored. |
 | Crimson Sovereign | Specialization | 30, plus 6 per second | 3 min | For up to 30 seconds every ability counts as your own type and gains power, and you lose 1 health per second (never below 1 heart). |
 | Aura Severance | Specialization | 25 | 45 s | Teammate: clear Nen Exhaustion, Nen Overuse and Vow Lockout, taking 2 damage for each. Enemy: end their abilities and techniques, then Nen Severed for 4 seconds. |
@@ -58,7 +60,7 @@ These are the starting values. A server owner can change them.
 | Barrage | Emission | 15, plus 6 per second | 15 s | Hold up to 3 seconds to fire a small aura bolt every quarter second (1 damage each, 24 blocks). |
 | Ricochet | Emission | 25 | 8 s | A spark hits the target in sight within 24 blocks for 6, then jumps up to twice to other creatures within 6 blocks, each hit a quarter weaker than the last. |
 
-The three beast abilities are not pool abilities: a manual teaches them to any type, and they use 4 to 5 memory when they match your type. The rows from Thief's Ledger on are **pool** abilities, four for each type: awakening gives a player one from the pool of their type at random, and no manual teaches them. Thief's Ledger's copy takes the ledger's slot, uses no memory, gains no mastery and is given back when it expires (3 minutes), on logout, and on death when the server wipes Nen at death (by default Nen is kept, and so is the copy until it expires). Nen Severed blocks every technique, Zetsu included, and every ability. See [Nen Types and Affinity](Nen-Types-and-Affinity).
+The three beast abilities are not pool abilities: a manual teaches them to any type, and they use 4 to 5 memory when they match your type. The rows from Thief's Ledger on are **pool** abilities, four for each type and five for Specialization: awakening gives a player one from the pool of their type at random, and no manual teaches them. Thief's Ledger's copy takes the ledger's slot, uses no memory, gains no mastery and is given back when it expires (3 minutes), on logout, and on death when the server wipes Nen at death (by default Nen is kept, and so is the copy until it expires). Nen Severed blocks every technique, Zetsu included, and every ability. See [Nen Types and Affinity](Nen-Types-and-Affinity).
 
 Addons can add more. An ability of another type costs the same aura but has less power (see [Nen Types and Affinity](Nen-Types-and-Affinity)).
 
@@ -84,6 +86,7 @@ The slots show along the bottom of your screen as the ability bar: a sweep for t
 - To be awakened, and the ability learned and bound.
 - Ten on. Abilities need it, so they will not work while Zetsu is on.
 - Enough aura, and the cooldown finished.
+- Room under your [Output Ceiling](Output-Ceiling), the limit on how much aura you can spend each second.
 - No Nen Exhaustion and no Vow Lockout.
 
 If any of these fail, the action bar tells you which.
@@ -93,7 +96,7 @@ If any of these fail, the action bar tells you which.
 You can only remember so much Nen. **Memory** is a limit on how many abilities you can know at once.
 
 - You start with 10 memory. It grows with your level, up to 60 at the level cap.
-- Each ability uses some of it. The built-in ones use 2 to 4 when they match your type (Aura Read, a Specialization pool ability, uses 2). The three beast abilities use 4 or 5. Abilities that are granted to you count toward the total too. A type further from yours costs more: the cost is divided by your affinity and rounded up. A tooltip on every manual shows the base cost.
+- Each ability uses some of it. The built-in ones use 2 to 4 when they match your type (Aura Read, a Specialization pool ability, uses 2). The three beast abilities use 4 or 5. The pool abilities Godspeed, Lucky Slots and Crimson Sovereign use 5. Abilities that are granted to you count toward the total too. A type further from yours costs more: the cost is divided by your affinity and rounded up. A tooltip on every manual shows the base cost.
 - A manual is refused if learning it would put you over your limit. The message gives the cost and what you have free.
 - Your signature Hatsu also uses memory (usually 12 to 20).
 

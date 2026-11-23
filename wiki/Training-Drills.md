@@ -105,6 +105,10 @@ The status screen (**N**) has a "Lived Properties" block with a line for each pr
 
 A server can switch the whole feature off with `lived.enabled`.
 
+## Training Dummy
+
+A practice target that shows the damage it takes: each hit, critical hits, the Nen part, and the total and damage per second over a combo. Craft it from 2 hay bales, 2 sticks and a wooden fence: a hay bale on top, then stick, hay bale, stick, then the fence at the bottom. Sneak and punch it with an empty hand to pick it up. Hitting it earns no XP and no training.
+
 ## For servers
 
 The wait and the XP are set in the server config: `drillRetrySeconds`, `drillTenXp`, `drillRenXp` and `drillGyoXp`. Setting the XP to 0 keeps the drill as pure practice. See [Server Owners](Server-Owners).

@@ -23,7 +23,7 @@ This is the normal way.
 
 Moving away, crouching, taking damage or breaking the stone cancels the meditation, and you can start again. When the 30 seconds end, you awaken.
 
-If you are already awake, using the stone opens a menu instead. Choose **Meditate** to run the same 30-second meditation, which gives you 15 XP of practice, or choose a training drill (see [Training Drills](Training-Drills)).
+If you are already awake, using the stone opens a menu instead. Choose **Meditate** to run the same 30-second meditation, which gives you 15 XP of practice, or choose a training drill (see [Training Drills](Training-Drills)). Once you know an ability, a practice meditation holds a **focus check**: at a random moment it names one of your slotted abilities, and you must press that ability's key within 6 seconds or the meditation ends. The press uses nothing. If you know abilities but have none in a slot, put one in a slot first.
 
 ## Route 2: forced awakening
 

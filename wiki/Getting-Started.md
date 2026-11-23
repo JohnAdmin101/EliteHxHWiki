@@ -29,11 +29,11 @@ Press **N**. The hub shows your type, level, XP and aura on the Status tab, with
 
 Press **R**. A ring of eight slots opens: Ten, Ken, Ryu, Shu, Gyo, In, En and Zetsu. Click one to switch it on or off. Locked ones show the level they need. At the start only Ten is yours; Zetsu arrives at level 2 and Gyo at level 8. See [Techniques and the Wheel](Techniques-and-the-Wheel) for what each one does and when it unlocks.
 
-The wheel is the main way to use techniques. The keys for Ten, Zetsu, Gyo, Ken and En are unbound until you choose to bind them.
+The wheel is the main way to use techniques. The keys for Ten, Zetsu, Gyo, Ken, En, Shu, In, Ryu and Ko are unbound until you choose to bind them.
 
 ## 5. Grow, and flare your aura with Ren (C)
 
-Your level grows with Nen XP. Early on, the easy sources are finishing another meditation at the stone (15 XP each), passing a [training drill](Training-Drills) and using abilities (5 XP per completed use). XP is capped at 60 a minute, so patience is part of the design. Level 2 needs 250 XP in total and level 4 needs 700.
+Your level grows with Nen XP. Early on, the easy sources are finishing another meditation at the stone (15 XP each), passing a [training drill](Training-Drills) and using abilities (5 XP per completed use). Fighting with Ten or Ren on also pays a little: 1 XP a hit and 5 a kill, less for repeated hits on the same target. XP is capped at 60 a minute, so patience is part of the design. Level 2 needs 250 XP in total and level 4 needs 700.
 
 At level 4 you unlock **Ren**. Hold **C** to flare your aura: the steam swells, you take less damage, and your abilities hit harder the longer you hold. Ren costs aura while you hold it, and it is also a slow way to earn XP (1 per second while it runs). Release C to stop.
 
@@ -63,7 +63,7 @@ A vow is a promise that makes an ability stronger and costs you if you break it.
 
 - Reach Nen level 10 for Ken and a third ability slot, and level 12 for En.
 - Reach Nen level 25 to earn the **Adept** advancement.
-- Reach Nen level 15 for the Hatsu trial and the fourth slot. Passing the trial lets you forge a signature Hatsu of your own. See [Hatsu](Hatsu).
+- Reach Nen level 15 for the Hatsu trial and the fourth slot. Passing the trial lets you forge a signature Hatsu of your own, and a second and third Hatsu slot open at level 30 and 45. See [Hatsu](Hatsu).
 - Reach the top Nen level (level 50 by default) to earn the last milestone in the **Nen** tab, Limit Reached.
 
 If something does not work, [FAQ and Troubleshooting](FAQ-and-Troubleshooting) has the common answers. All the keys are on [Controls](Controls).

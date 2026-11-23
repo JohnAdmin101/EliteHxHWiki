@@ -48,7 +48,7 @@ Every operator command sits under `/nen admin`. The commands outside it are for 
 | `elitehxh.command.hatsu` | `/nen admin hatsu info\|rename\|approve\|reset <player>` (rename, approve and reset take an optional `slot <1-3>` before the name; no slot means slot 1, or the slot whose name waits for approve). The same node covers `/nen admin insight <player> show\|grant <amount>\|unlock <part>\|lock <part>\|reset-respec` for Hatsu insight |
 | `elitehxh.command.me` | `/nen me`: your own Nen, like `/nen admin info` on yourself. Every player can use `/nen me`, so this node defaults to everyone, not to operators. |
 | `elitehxh.command.nation` | `/nation found\|info\|list\|invite\|accept\|leave\|kick\|rank\|crown\|rename\|disband\|color\|claim\|unclaim\|grant\|revoke\|rights\|ally\|neutral\|enemy\|trust\|untrust\|map`: found a nation (or just claim, which makes a personal one), invite and rank members, claim and hand out land, trust friends, set relations, open the claim map. Every player can use it, so this node defaults to everyone, not to operators. |
-| `elitehxh.command.nation_admin` | `/nation admin disband\|expire\|setking\|claim\|unclaim\|rename\|bypass\|zone`: operator tools that skip the player rules. `bypass` only works while you are in creative mode and stops the moment you lose this permission. The admin tree sits under `/nation`, so a group denied `elitehxh.command.nation` cannot reach it either: grant `nation` to staff who need `nation_admin`. |
+| `elitehxh.command.nation_admin` | `/nation admin disband\|expire\|setking\|claim\|unclaim\|rename\|bonus\|bypass\|zone`: operator tools that skip the player rules. `/nation admin zone create <name>`, `delete <name>`, `flag <zone> ...` and `list` make, remove, tune and list protected zones (see [Nations](Nations)). `bypass` only works while you are in creative mode and stops the moment you lose this permission. The admin tree sits under `/nation`, so a group denied `elitehxh.command.nation` cannot reach it either: grant `nation` to staff who need `nation_admin`. |
 | `elitehxh.command.clear` | `/nen admin clear exhaustion\|lockout\|overuse\|cooldowns <players>`: end Nen Exhaustion, Vow Lockout, Nen Overuse or every ability cooldown early. `/nen admin clear cooldowns <players> <ability>` clears one ability's cooldown. `/nen admin clear examwait\|trialwait <players>` ends the wait after a failed Hunter Exam or Hatsu trial. Nothing running ends. |
 | `elitehxh.command.list` | `/nen admin list`: every awakened player online, with type, level, aura and how many abilities and techniques are running |
 | `elitehxh.command.restore` | `/nen admin restore <players>`: full aura, and no Nen Exhaustion, Vow Lockout, Nen Overuse or cooldowns. Nothing running ends, and Nen Severed stays. |
@@ -62,7 +62,7 @@ Every operator command sits under `/nen admin`. The commands outside it are for 
 | `elitehxh.command.geas` | `/nen geas release`: the caster of a Geas (Binding Word) lets the bound player go. Defaults to everyone, not to operators. |
 | `elitehxh.command.jenny` | `/nen admin jenny give\|take\|set <players> <amount>`: change the Jenny in a player's bank account. It works with the economy switched off. `take` never goes below 0 |
 | `elitehxh.command.tower` | `/nen admin tower floor <players> <floor>` sets a Tower floor, `endmatch <players>` calls off a match, `record <players> <wins> <losses>` sets a player's Tower wins and losses and `seat <rank> <player>\|clear` fills or empties a Floor Master seat. `/nen tower leave` and `/nen tower forfeit` need no node: every player can use them |
-| `elitehxh.command.hunter` | `/nen admin hunter visit [player]` sends a Wandering Hunter to a player (the chance, the interval and the cap are ignored) and `/nen admin hunter forgive <player>` ends a Hunter grudge |
+| `elitehxh.command.hunter` | `/nen admin hunter visit [player]` sends a Wandering Hunter to a player (the chance, the interval and the cap are ignored) and `/nen admin hunter forgive <player>` ends a Hunter grudge. The same node covers `/nen admin antique <item> [genuine\|fake\|hidden] [player]`, which gives an antique of a chosen truth (genuine when you name none, and to yourself when you name no player) for testing [Maker's Trace](Makers-Trace) |
 | `elitehxh.command.hive` | `/nen admin hive found\|clear\|stage <1-4>\|info`: found, end, stage or inspect a Broodmother hive |
 | `elitehxh.command.seal` | `/nen admin seal list <player>` and `/nen admin seal clear <player>`: list or remove a player's aura seals. A creative player who holds this node also ignores seals |
 | `elitehxh.command.reset` | `/nen admin reset <player>`: clear all of a player's Nen |
@@ -107,6 +107,18 @@ Infused gear is tuned by `infusionLevel`, `infusionSeconds`, `infusionAuraFloor`
 Each system below has its own table in `server.toml`, and most have a switch that turns the whole system off without deleting any data. The tables here list the keys most owners touch; the full list, with ranges, is in the config file and in `docs/config-reference.md`. Keys named `enabled` sit inside their own table, for example `[economy]`.
 
 **Output ceiling** (`[output]`, see [Output Ceiling](Output-Ceiling)). `enabled` is true. `base` is 8 aura per second at level 0 and `perLevel` adds 0.5 per Nen level. `overdrawLimit` (2) is the most a player may draw as a multiple of the ceiling, `trainingDailyCap` (600) is the seconds of Output training that count per game day, and `trainedMaxBonus` (0.25) is the most training adds. Turn `enabled` off and techniques are no longer limited by how fast a player can draw aura.
+
+**Killing intent** (`[killingIntent]`, see [Techniques and the Wheel](Techniques-and-the-Wheel)). `killingIntentMinLevel` (20), `killingIntentRadius` (8), `killingIntentLevelGap` (15), `killingIntentHealthPerLevel` (1.0), `killingIntentFleeTicks` (60), `dreadSeconds` (2) and `dreadCooldownSeconds` (10).
+
+**Aura residue** (`[residue]`). `residueSeconds` (300) is how long a residue stays readable and `residueTrailSeconds` (30) is how long a user keeps leaving it after a Nen use.
+
+**Ability mastery tiers** (`[mastery]`). `masteryPracticedCostScale`, `masteryPracticedCooldownScale`, `masteryMasteredCostScale` and `masteryMasteredCooldownScale` set how much cheaper and faster an ability gets at the Practiced and Mastered tiers.
+
+**Ability looks** (top level, see [Controls](Controls)). `hatsuLooksEnabled` (true) lets players change how their abilities look; `hatsuLookFreeColors` (true) lets them pick any color, and off holds colors to the Nen type color so a look cannot hide a type; `hatsuLookMasteryGates` (false) makes shapes wait for the Practiced tier and ornaments, motion and density for Mastered; `hatsuLookMinBrightness` (0.2) lightens colors that are too dark to see.
+
+**Combat XP** (top level). `combatHitXp` (1) and `combatKillXp` (5) are the Nen XP for a hit and a kill with Ten or Ren on.
+
+**Sleeping with Ten** (top level). `restfulTenXp` (30), `restedTenSeconds` (1200) and `restedTenRegen` (1.2).
 
 **Wrath** (`[wrath]`). `wrathMinLevel` (15), `wrathSeconds` (10), `wrathCooldownSeconds` (600), `wrathAuraBonus` (0.5), `outputBonus` (0.5) and `wrathExhaustionSeconds` (30).
 

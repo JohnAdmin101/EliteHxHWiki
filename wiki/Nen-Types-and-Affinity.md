@@ -11,13 +11,13 @@ Every awakened player has one of six Nen types. You are given it when you awaken
 | Emission | Send aura away from the body | Aura Bolt: charge and release an orb that bursts on impact. Pool: Waypoint Gate, Remote Fist, Barrage, Ricochet |
 | Manipulation | Control things and creatures | Aura Tether: hold or pull a target. Pool: Puppet Needle, Calming Touch, Debt Collector, Marionette Self |
 | Conjuration | Turn aura into a real object | Aura Construct: conjure a blade, or a shield while crouching. Pool: Binding Chain, Mending Chain, Lucky Slots, Dowsing Chain |
-| Specialization | Unique abilities that fit nowhere else | Aura Read, Thief's Ledger, Crimson Sovereign or Aura Severance, whichever you roll |
+| Specialization | Unique abilities that fit nowhere else | Aura Read, Thief's Ledger, Crimson Sovereign, Aura Severance or Exorcism, whichever you roll. Binding Word comes to every Specialist at Nen level 25 (see [Vows](Vows)) |
 
 Specialization is the odd one out. Its abilities cannot be learned from manuals. Each Specialist gets one ability from the Specialization **pool** when they awaken, at random, and keeps it (see below), so a Specialist has nothing to inscribe on a Blank Nen Manual. Specialists still use every other type's abilities, from manuals found in the world, and they get a special choice at the Hatsu stone (see [Hatsu](Hatsu)).
 
 ## Your type's pool
 
-Each type can have a pool of birthright abilities, and awakening gives you one of your type's pool at random. No manual teaches it, you cannot forget it and nobody can borrow it from you. Every type has a pool, four abilities each. Players who awakened before a type's pool existed do not get a pick; only a new awakening (or an admin) gives one.
+Each type can have a pool of birthright abilities, and awakening gives you one of your type's pool at random. No manual teaches it, you cannot forget it and nobody can borrow it from you. Every type has a pool: four abilities each, and five for Specialization. Players who awakened before a type's pool existed do not get a pick; only a new awakening (or an admin) gives one.
 
 **Enhancement**
 
@@ -39,6 +39,7 @@ Each type can have a pool of birthright abilities, and awakening gives you one o
 - **Thief's Ledger** copies a random ability of a player you strike for three minutes. The copy takes the ledger's slot and works at full affinity.
 - **Crimson Sovereign** is a toggle that makes every ability count as your own type and adds power, at the price of your health.
 - **Aura Severance** clears a teammate's Nen ailments, or cuts an enemy off from their aura for a few seconds.
+- **Exorcism** lifts every curse from a willing player's gear and ends their broken-vow penalties. See [Cursed Items](Cursed-Items).
 
 **Conjuration**
 
