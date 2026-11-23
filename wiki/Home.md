@@ -2,7 +2,7 @@
 
 Elite HxH adds Nen to Minecraft. You wake your aura at a Meditation Stone, learn to wrap it around your body, to hide it, to spread it out and to flare it, and then you learn abilities of your own. Your aura is visible: steam in your Nen type's color pours off your body, and it changes with what you are doing. The screens and the HUD are built to match, so everything you do with Nen looks the part.
 
-The mod is for NeoForge, Minecraft 26.3. It needs GeckoLib, and every client also needs Player Animation Library. It works in singleplayer and on servers, and other mods can add abilities, vows and effects through a public addon API.
+The mod is for NeoForge, Minecraft 26.3. It needs GeckoLib and Curios API, and every client also needs Player Animation Library. It works in singleplayer and on servers, and other mods can add abilities, vows and effects through a public addon API.
 
 ## New here?
 
@@ -22,6 +22,13 @@ Start with [Getting Started](Getting-Started). It walks you through your first h
 - Pour your Nen into a sword, tool or armor piece for good. See [Infused Gear](Infused-Gear).
 - Learn what a fallen Nen user leaves behind. See [Post-mortem Nen](Post-mortem-Nen).
 - Pass the Hatsu trial and forge a signature Hatsu of your own. See [Hatsu](Hatsu).
+- Learn how much aura you can draw each second, and what happens when you overdraw. See [Output Ceiling](Output-Ceiling).
+- Take Hunter contracts and bounties, and read rankings at a Hunter Terminal, paid in Jenny. See [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties).
+- Climb the Tower Arena floor by floor in refereed matches. See [Tower Arena](Tower-Arena).
+- Hunt gourmet game and cook dishes at an Aura Pot. See [Gourmet](Gourmet).
+- Equip Hunter Alloy weapons and armor, and wear rings, charms and other accessories. See [Hunter's Arsenal](Hunters-Arsenal) and [Accessories](Accessories).
+- Study antiques with Gyo and sell them to a Wandering Hunter. See [Maker's Trace](Makers-Trace).
+- Learn the creatures of the world, from wild beasts to hives. See [Bestiary](Bestiary).
 
 ## All the pages
 
@@ -30,6 +37,7 @@ Start with [Getting Started](Getting-Started). It walks you through your first h
 | [Getting Started](Getting-Started) | Your first hour, step by step |
 | [Awakening](Awakening) | Every way to wake your Nen, and what you start with |
 | [Techniques and the Wheel](Techniques-and-the-Wheel) | Ten, Zetsu, Ren, Gyo, Ken, En and the technique wheel |
+| [Output Ceiling](Output-Ceiling) | How fast you can draw aura, overdraw, strain and Output training |
 | [Nen Types and Affinity](Nen-Types-and-Affinity) | The six types and how your type shapes every ability |
 | [Abilities and Nen Manuals](Abilities-and-Nen-Manuals) | Where manuals come from, slots, memory and mastery |
 | [Vows](Vows) | The oaths, their costs and what breaking one does |
@@ -37,7 +45,14 @@ Start with [Getting Started](Getting-Started). It walks you through your first h
 | [Nen Beasts](Nen-Beasts) | The three beasts made of your aura: how to summon, order and lose them |
 | [Cursed Items](Cursed-Items) | Leftover Nen on loot, its boons and banes, and how to remove it |
 | [Infused Gear](Infused-Gear) | Pouring your Nen into gear: the ritual, the five imprints, upkeep and Bound |
+| [Hunter's Arsenal](Hunters-Arsenal) | Hunter Alloy weapons and armor and their set bonuses |
+| [Accessories](Accessories) | Rings, necklaces, charms and other Curios slots |
 | [Post-mortem Nen](Post-mortem-Nen) | What a strong Nen user's death leaves: the risen body, the Death Grudge and the orphaned beast |
+| [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties) | Rankings, contracts, player bounties and Jenny |
+| [Tower Arena](Tower-Arena) | The pocket dimension of refereed matches and the floor ladder |
+| [Gourmet](Gourmet) | Game animals, the Aura Pot and dishes |
+| [Maker's Trace](Makers-Trace) | Antiques, studying them with Gyo and appraisal |
+| [Bestiary](Bestiary) | The creatures of the world |
 | [Hatsu](Hatsu) | The trial and the forge |
 | [Hunter Exam](Hunter-Exam) | The Exam Board, the three trials and the Hunter License |
 | [Rogue Nen User](Rogue-Nen-User) | The hostile Nen user: what he does and how your Nen reads him |

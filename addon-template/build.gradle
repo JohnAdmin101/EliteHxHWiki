@@ -33,6 +33,18 @@ repositories {
             includeGroupAndSubgroups('com.geckolib')
         }
     }
+    // Curios, a mod Elite HxH requires for its accessory slots: it comes with Elite HxH's own dependencies.
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Curios'
+                url = 'https://maven.theillusivec4.top/'
+            }
+        }
+        filter {
+            includeGroupAndSubgroups('top.theillusivec4.curios')
+        }
+    }
     // Player Animation Library (PAL), a client mod Elite HxH requires for body animations: it comes with Elite HxH's own
     // dependencies. PAL's libraries (group org.redlance) are published in the same repository.
     exclusiveContent {

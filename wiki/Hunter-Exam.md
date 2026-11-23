@@ -36,8 +36,11 @@ What the license gives you:
 - A line "Hunter License: No. n" on your status screen (N), under your level.
 - One extra trade with Expert and Master librarians: a Nen Manual for 16 emeralds (12 from one star) and a book, up to 4 times between restocks. Only you, as a licensed player, see it. The manual on offer stays the same until the villager restocks.
 - On servers that turn it on, the right to take the Hatsu trial. See [Hatsu](Hatsu).
+- Access to the [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties): rankings, Rogue sightings and daily bounty contracts.
 
 The license belongs to you, not to the card. Losing the card costs you nothing: use the Exam Board again and you get a free replacement. Someone who picks your card up gets nothing from it.
+
+You can also wear the card in its own slot, the Hunter License slot, next to the Curios slots. A worn card shows as a small card on your chest. It counts for the exam check, and by default you keep it when you die. See [Accessories](Accessories).
 
 If you reset your Nen, you lose the license too. Your old card turns void (its tooltip says so, in red) and you must pass the exam again for a new number. Your advancement stays. A failed-exam wait is not cleared by a reset.
 
@@ -52,6 +55,8 @@ Once you are licensed, use the Exam Board again to open the Hunter dialog and pi
 | Treasure | Cleanse a curse or settle a vow penalty at the Meditation Stone, or exorcise a curse (15); open a generated loot chest for the first time (2) | Curses show in the tooltip without Gyo | The Stone's Cleanse costs half the levels |
 | Gourmet | Eat a food for the first time (5); eat a smelted or cooked food (1) | Eating restores aura, twice the food's nutrition | +25% saturation from food |
 | Archaeology | Finish brushing a suspicious block (5); open a trial vault (5) | A 5% chance of a bonus loot roll when brushing | Aura residue can be read from 50% further |
+
+Cooking and hunting rare game earn Gourmet points too: see [Gourmet](Gourmet). Bounty marks count as Blacklist deeds.
 
 Only deeds you do yourself count (a Nen beast you summoned does not kill for you), and only in the real world: exam monsters, animals from spawn eggs or spawners, risen mobs, other players and fake players earn nothing. Bred animals count when both parents are natural. Frog and sniffer breeding earns nothing; Ocelot and fox trust counts as taming. Each kind of deed adds at most 30 points per day (a UTC day). A player lying still after a Second Beat earns nothing. Your status screen (N) shows your specialty, your points, how many are left to the next tier, your stars and your sponsor.
 

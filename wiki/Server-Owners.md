@@ -8,6 +8,7 @@ You need these on **both** the server and every client:
 
 - Minecraft 26.3 with NeoForge 26.3.0.99 or newer, on Java 25.
 - **GeckoLib** 5.5.7 or newer (below version 6). It is a required dependency, and it must be in the mods folder on the server and on the clients. If the game stops at start-up with a message about a missing mod, this is the usual reason.
+- **Curios API** 17.0.1 or newer (below version 18) for Minecraft 26.3. It is also required, on the server and on every client: the rings, necklaces, charms and other accessories equip into its slots.
 - The Elite Hunter X Hunter jar.
 
 Every client also needs **Player Animation Library** 1.2.8 or newer (below 1.3), which moves the player model with Nen. The server does not need it.
@@ -34,7 +35,7 @@ Hunter stars and specialties have three keys: `starPoints` (deed points in a spe
 
 ## Commands and permissions
 
-Every operator command sits under `/nen admin`. The one command outside it is `/nen me`, which every player can use. A bare `/nen` does nothing. Each subcommand has its own permission node, `elitehxh.command.<name>`, and it defaults to operator level 2. With a permission mod such as LuckPerms, you can hand a node to moderators without making them operators.
+Every operator command sits under `/nen admin`. The commands outside it are for every player: `/nen me`, `/nen en shape`, `/nen explain`, `/nen geas release` and `/nen tower leave|forfeit` (plus `/nation`). A bare `/nen` does nothing. Each subcommand has its own permission node, `elitehxh.command.<name>`, and it defaults to operator level 2. With a permission mod such as LuckPerms, you can hand a node to moderators without making them operators.
 
 | Node | Command |
 | --- | --- |
@@ -44,7 +45,7 @@ Every operator command sits under `/nen admin`. The one command outside it is `/
 | `elitehxh.command.technique` | `/nen admin technique grant\|revoke\|activate <player> <technique>` |
 | `elitehxh.command.ability` | `/nen admin ability grant\|revoke\|use <player> <ability>` |
 | `elitehxh.command.vow` | `/nen admin vow add\|remove <player> <vow> [ability]` |
-| `elitehxh.command.hatsu` | `/nen admin hatsu info\|rename\|approve\|reset <player>` (rename, approve and reset take an optional `slot <1-3>` before the name; no slot means slot 1, or the slot whose name waits for approve) |
+| `elitehxh.command.hatsu` | `/nen admin hatsu info\|rename\|approve\|reset <player>` (rename, approve and reset take an optional `slot <1-3>` before the name; no slot means slot 1, or the slot whose name waits for approve). The same node covers `/nen admin insight <player> show\|grant <amount>\|unlock <part>\|lock <part>\|reset-respec` for Hatsu insight |
 | `elitehxh.command.me` | `/nen me`: your own Nen, like `/nen admin info` on yourself. Every player can use `/nen me`, so this node defaults to everyone, not to operators. |
 | `elitehxh.command.nation` | `/nation found\|info\|list\|invite\|accept\|leave\|kick\|rank\|crown\|rename\|disband\|color\|claim\|unclaim\|grant\|revoke\|rights\|ally\|neutral\|enemy\|trust\|untrust\|map`: found a nation (or just claim, which makes a personal one), invite and rank members, claim and hand out land, trust friends, set relations, open the claim map. Every player can use it, so this node defaults to everyone, not to operators. |
 | `elitehxh.command.nation_admin` | `/nation admin disband\|expire\|setking\|claim\|unclaim\|rename\|bypass\|zone`: operator tools that skip the player rules. `bypass` only works while you are in creative mode and stops the moment you lose this permission. The admin tree sits under `/nation`, so a group denied `elitehxh.command.nation` cannot reach it either: grant `nation` to staff who need `nation_admin`. |
@@ -57,6 +58,13 @@ Every operator command sits under `/nen admin`. The one command outside it is `/
 | `elitehxh.command.zone` | `/nen admin zone add <name> <from> <to>`, `/nen admin zone remove <name>`, `/nen admin zone list`: Nen-sealed areas where players are held in Zetsu and cannot use Nen |
 | `elitehxh.command.pool` | `/nen admin pool roll <players>`: roll a player's type ability pool again. `/nen admin pool set <players> <ability>`: choose their pool ability; it must be a pool ability of their own type |
 | `elitehxh.command.license` | `/nen admin license grant <player>`, `/nen admin license revoke <player>`: give a Hunter License (the next number) or take it away. `/nen admin license specialty <player> <specialty>` picks a specialty with no switch wait, `/nen admin license deeds <player> <specialty> <points>` sets that specialty's points (0 removes them) and `/nen admin license stars <player> <0-3>` sets the stored star count. A star count set below what the points earn lasts only until the player's next deed or login raises it again; to lower stars for good, lower the deed points too |
+| `elitehxh.command.explain` | `/nen explain [ability]`: explain an ability the player swore the Open Hand Oath on to the target in their crosshair. Defaults to everyone, not to operators. |
+| `elitehxh.command.geas` | `/nen geas release`: the caster of a Geas (Binding Word) lets the bound player go. Defaults to everyone, not to operators. |
+| `elitehxh.command.jenny` | `/nen admin jenny give\|take\|set <players> <amount>`: change the Jenny in a player's bank account. It works with the economy switched off. `take` never goes below 0 |
+| `elitehxh.command.tower` | `/nen admin tower floor <players> <floor>` sets a Tower floor, `endmatch <players>` calls off a match, `record <players> <wins> <losses>` sets a player's Tower wins and losses and `seat <rank> <player>\|clear` fills or empties a Floor Master seat. `/nen tower leave` and `/nen tower forfeit` need no node: every player can use them |
+| `elitehxh.command.hunter` | `/nen admin hunter visit [player]` sends a Wandering Hunter to a player (the chance, the interval and the cap are ignored) and `/nen admin hunter forgive <player>` ends a Hunter grudge |
+| `elitehxh.command.hive` | `/nen admin hive found\|clear\|stage <1-4>\|info`: found, end, stage or inspect a Broodmother hive |
+| `elitehxh.command.seal` | `/nen admin seal list <player>` and `/nen admin seal clear <player>`: list or remove a player's aura seals. A creative player who holds this node also ignores seals |
 | `elitehxh.command.reset` | `/nen admin reset <player>`: clear all of a player's Nen |
 | `elitehxh.command.debug` | `/nen admin debug aura\|faults\|perf` |
 | `elitehxh.command.fx` | `/nen admin fx <kind> [color] [radius] [life]` |
@@ -93,6 +101,42 @@ Cursed items are tuned by the `curse*` keys (bonus and drain amounts, the health
 Post-mortem Nen (the risen body, the Death Grudge, the orphaned beast and rising rogues) is tuned by `postMortemEnabled` (off stops all of it), `postMortemLevel`, `postMortemCooldownSeconds`, `postMortemPairSeconds`, `postMortemGates`, the `remnant*`, `grudge*` and `orphanSeconds` keys, `rogueRiseChance` and one `postMortem<Effect>` key per effect. The grudge effects add `grudgeTrailRadius`, `grudgeTrailSeconds`, `cursedWeaponChance`, `grudgeSealSeconds`, `hauntedSeconds`, `maxHauntedSpots`, `hauntedAuraDrain`, `sealHardenScale`, `lingeringLoanMaxSeconds` and `lingeringLoanPotency`. See [Post-mortem Nen](Post-mortem-Nen).
 
 Infused gear is tuned by `infusionLevel`, `infusionSeconds`, `infusionAuraFloor`, `infusionXpLevels`, `infusionUpkeep`, `maxInfusedPieces`, `infusionStrangerScale` and `infusionGradeLevels`, and each imprint has its own section in `abilities.toml`. See [Infused Gear](Infused-Gear).
+
+### Newer systems
+
+Each system below has its own table in `server.toml`, and most have a switch that turns the whole system off without deleting any data. The tables here list the keys most owners touch; the full list, with ranges, is in the config file and in `docs/config-reference.md`. Keys named `enabled` sit inside their own table, for example `[economy]`.
+
+**Output ceiling** (`[output]`, see [Output Ceiling](Output-Ceiling)). `enabled` is true. `base` is 8 aura per second at level 0 and `perLevel` adds 0.5 per Nen level. `overdrawLimit` (2) is the most a player may draw as a multiple of the ceiling, `trainingDailyCap` (600) is the seconds of Output training that count per game day, and `trainedMaxBonus` (0.25) is the most training adds. Turn `enabled` off and techniques are no longer limited by how fast a player can draw aura.
+
+**Wrath** (`[wrath]`). `wrathMinLevel` (15), `wrathSeconds` (10), `wrathCooldownSeconds` (600), `wrathAuraBonus` (0.5), `outputBonus` (0.5) and `wrathExhaustionSeconds` (30).
+
+**Seals** (`[seals]`). `sealMinLevel` (10), `sealAuraCost` (50), `sealMaxPerPlayer` (16) and `breachSeconds` (20). Players with the `elitehxh.command.seal` node ignore seals in creative mode.
+
+**Wounds** (`[wounds]`). `woundsEnabled` (true), `woundThreshold` (6), `woundMaxStacks` (3), `woundSeconds` (600) and `woundMaxHealthPerStack` (2). A Nen Wound cuts max health and ordinary healing.
+
+**Geas and Open Hand Oath** (`[geas]`, `[explain]`). `geasEnabled` (true), `geasConsentSeconds` (30), `geasBeatenHealth` (0.3), `geasBeatenSeconds` (600) and `geasUpkeepPerSecond` (0.5); `explainRange` (8), `explainSeconds` (3), `explainBonus` (1.3) and `explainBonusSeconds` (300). See [Vows](Vows).
+
+**Final Pledge** (`[pledge]`). `finalPledgeEnabled` (true), `pledgeSeconds` (60), `pledgePotencyCap` (4), `pledgeAwakenDays` (7) and `pledgeSpentSeconds` (600).
+
+**Combined Hatsu** (`[combined]`). `combinedEnabled` (true), `linkSeconds` (300), `linkRange` (24), `linkConsentSeconds` (30) and `fusionCooldownSeconds` (30).
+
+**Dishes** (`[dishes]`, see [Gourmet](Gourmet)). `dishesEnabled` (true), `cookSeconds` (8), `attunedSeconds` (300), `attunedPotency` (1.05), `rationSeconds` (600) and `calmTeaSeconds` (600).
+
+**Hunter Terminal and bounties** (`[terminal]`, `[bounty]`, see [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties)). `terminalEnabled` (true), `terminalScanRadius` (512), `terminalWanted` (true), `bountiesEnabled` (true), `bountyOffersPerDay` (3), `bountyPayTier1` to `bountyPayTier3` (300, 700, 1500 Jenny), `bountyContractMinutes` (60), `bountyPlayersEnabled` (true), `bountyMinPost` (100), `bountyPostFeePercent` (10), `bountyPlayerHours` (24) and `bountyKillNoGrudge` (true). Turn `bountyPlayersEnabled` off to stop players posting bounties on each other.
+
+**Jenny economy** (`[economy]`). `enabled` (true), `walletCapacity` (1000000), `jennyPerEmerald` (1000), `transferFee` (0), `interestRate` (0.005 a day), `interestBalanceCap` (1000000), `bankersPerPlayer` (2), `rogueDropMin` (20) and `rogueDropMax` (120). Jenny buys emeralds at an ATM; emeralds cannot be sold for Jenny.
+
+**Tower Arena** (`[tower]`, see [Tower Arena](Tower-Arena)). `enabled` (true), `matchSeconds` (180), `pointsToWin` (10), `npcWaitSeconds` (20), `matchCooldownSeconds` (60), `purseBase` (150), `purseGrowth` (1.6), `maxLiveMatches` (16), `playerMatches` (true), `stakes` (true), `spectators` (true), `floorMasterSeats` (5) and `baptism` (true; it also needs `allowForcedAwakening`). The `fighter*` and `class200*` keys set how strong the NPC fighters are.
+
+**Mobs** (`[mobs.*]`, see [Bestiary](Bestiary)). Aura ticks: `auraTicksEnabled` (true), `auraTickSpawnChance` (0.15). Typed Rogue kits: `rogueKitsEnabled` (true), `rogueKitMinLevel` (10), `adeptSpawnChance` (0.05). Gourmet game: `gourmetGameEnabled` (true), `gourmetGameSpawnChance` (0.04). Wandering Hunters: `wanderingHuntersEnabled` (true), `hunterVisitMinutes` (40), `hunterVisitChance` (0.5), `maxWanderingHunters` (3), `hunterMinLevel` (25), `hunterMaxLevel` (45) and `hunterPriceFactor` (1). Hives: `hivesEnabled` (true), `maxHives` (1), `hiveRespawnDays` (7), `hiveClaimDistance` (256) and `hiveRewardFactor` (1). Each has a switch, so a server can turn any group off alone.
+
+**Hunter's Arsenal** (`[gear]`, see [Hunter's Arsenal](Hunters-Arsenal)). `gearSetBonusesEnabled` (true), `gearKnifeBackstabMultiplier` (1.5), `gearDrawCutMultiplier` (1.4), `gearDrawCutSeconds` (3), `gearConductorFactor` (2), `gearBulwarkSetHealth` (4) and `gearAuraWovenSetMaxAura` (0.1).
+
+**Accessories** (`[accessories]`, see [Accessories](Accessories)). `keepLicenseOnDeath` (true), `infusedAccessories` (true), `truthPendantCharges` (3) and `conduitRingOutputBonus` (0.1). They need Curios API.
+
+**Lived Properties** (`[lived]`). `enabled` (true), `livedDailyCap` (40), and the tiers `livedFeltUnits` (40), `livedKnownUnits` (200) and `livedSecondNatureUnits` (600). `livedChargeMax` (100) caps the shock charge; 0 turns charge off.
+
+**Maker's Trace** (`[trace]`, see [Maker's Trace](Makers-Trace)). `enabled` (true), `traceStudySeconds` (3), `traceStudyAura` (10), `traceStake` (50), `traceBaseJenny` (40), `traceDailyJenny` (600), `traceChestChance` (0.06), `traceBrushChance` (0.08) and `traceVillagerOffer` (true). Turn `enabled` off for no antiques, no offers, and no study or sale.
 
 If the server is under load, `fxMaxEntitiesPerLevel` (default 256) caps how many effects exist in one level, and `payloadRateLimit` (default 20) caps how many requests a client can send each second.
 

@@ -16,6 +16,7 @@ public final class ExampleNenAddon {
         ExampleGeasTerms.TERMS.register(modEventBus);
         ExampleModifiers.COMPONENTS.register(modEventBus);
         ExampleNationListener.register();
+        ExampleHunterWares.register();
         ExamplePostMortemListener.register();
         ExampleImprints.register();
     }

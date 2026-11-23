@@ -82,11 +82,11 @@ Two [oaths](Vows) change a death. They are for the player who swears them, and a
 
 **Last Will Oath.** A player sworn to it makes any living killer count, not only players and creatures with aura, and the risen body and orphaned beast hit up to twice as hard (the Death Grudge and the rest are as above). At Nen level 40 or higher their death also leaves a **Nen Will**: their signature [Hatsu](Hatsu), left where they fell for an heir to take up at the Meditation Stone, at 70% of its power until the heir reworks it. The oath is used up, and the player cannot swear it again for 7 real days. On a server where Nen is lost on death, a death of a player with a signature Hatsu leaves a Will, with or without the oath, but not again until 7 real days have passed since their last Will.
 
-## For servers, M24c
+## For servers: hearts and Wills
 
 `heartCooldownSeconds` (3600), `heartStillSeconds` (5), `heartHealth` (4), `heartExhaustionSeconds` (60), `lastWillGrowth` (2), `willReswearDays` (7), `nenWillScale` (0.7) and `nenWillLevel` (40) tune them.
 
-## For servers, M24b
+## For servers: grudges, seals and haunted ground
 
 `grudgeTrailRadius` (64), `grudgeTrailSeconds` (60), `cursedWeaponChance` (0.5), `grudgeSealSeconds` (180), `hauntedSeconds` (1200), `maxHauntedSpots` (32), `hauntedAuraDrain` (2), `sealHardenScale` (2), `lingeringLoanMaxSeconds` (120) and `lingeringLoanPotency` (1.25) tune these, with the `postMortemAllySense`, `postMortemLingeringLoans`, `postMortemHardenGear`, `postMortemHardenSeals`, `postMortemCursedWeapon`, `postMortemSealedHatsu` and `postMortemHauntedGround` keys turning each on or off. All are listed in `docs/config-reference.md`.
 

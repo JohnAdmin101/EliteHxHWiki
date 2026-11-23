@@ -45,7 +45,9 @@ public final class ExampleAbilities {
      */
     public static final DeferredHolder<NenAbility, SparkHound> SPARK_HOUND = ABILITIES.register("spark_hound",
             () -> new SparkHound(NenAbility.properties(NenTypes.ENHANCEMENT).auraCost(25).cooldownTicks(300).durationTicks(600)
-                    .requiredTechniques()));
+                    .requiredTechniques()
+                    // Output load while it runs: -1 (the default) derives the load from upkeep.
+                    .outputLoad(4f)));
 
     private ExampleAbilities() {}
 

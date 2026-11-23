@@ -52,6 +52,66 @@ These two cover you as a whole, like the training oaths, and take a player-wide 
 
 While you lie still after a Second Beat you can do nothing: no attacks, no abilities or techniques, no using items. A blow from a creature or player kills you for real; fire and lava do too. Only someone using Gyo can tell you are there.
 
+## Open Hand Oath
+
+Nen level 15. A vow with no power in battle, no rule to break and no penalty: you tell an opponent exactly how one of your abilities works, and it hits them harder. It takes one of the vow slots of the ability you swear it on, and you can revoke it like most oaths.
+
+To explain, look at a player or another creature with aura within 8 blocks and press the **Explain** key (unbound by default, see [Controls](Controls)), or use `/nen explain`. Stand still and keep talking for 3 seconds. You cannot use abilities while you do, your pace is held to a walk, and you hold an open hand. It is lost if you are hurt, attack, use a bow or similar, the target walks out of reach or dies, or you hide your aura (Zetsu or In). You cannot explain while meditating, in a drill, a trial, an exam or lying still after Second Beat.
+
+When it works:
+
+- The target **knows** that ability from then on (for 60 minutes of game time), so you cannot explain it to them again in that time. A player is told which ability, with its description.
+- That ability hits that target 1.3 times as hard, from you only, for 5 minutes. A creature that bears aura, such as a Nen beast, takes half of the extra. A server restart ends it early, and so does either of you dying or logging out.
+- The extra applies to that ability only. Techniques, infused gear and mob attacks never get it.
+
+A Hatsu term called Told asks for this explanation: see [Laid Terms](Hatsu#laid-terms).
+
+## Binding Word and the Geas
+
+**Binding Word** is an ability of Specialists, given at Nen level 25. It costs half of your maximum aura, has a 10 minute cooldown and reaches 6 blocks. It offers another awakened player a **Geas**: a term the world enforces on them for a while. You pay a little aura each second to keep it (0.5 by default).
+
+How it goes:
+
+1. Look at the player, use Binding Word, pick a **term**, then how long it should last: 10, 30 or 60 minutes.
+2. They get a dialog and have 30 seconds to accept or decline.
+3. If you have just beaten them (they are under 30% health, and you hurt them in the last 10 seconds), they cannot decline, and the Geas lasts 10 minutes.
+
+You cannot bind someone in a Nen-sealed zone or an exam, or when either of you is already bound. A refused or timed-out offer does not give the aura back.
+
+| Term | The bound player may not |
+| --- | --- |
+| No Hatsu | Use abilities (techniques stay allowed). |
+| No Harm | Hurt you or your allies, including with arrows and tridents. Thorns and a pet defending its owner do not count. |
+| Stay Out | Set foot on the land of your nation. You are only offered this term if you have land. They are warned, then pushed out. |
+
+**Breaking it.** The first attempt is refused with a warning. The second strikes: the Geas ends, they lose 30% of their aura and get 2 minutes of Vow Lockout. They always see the term, the time left and who laid it in the status screen.
+
+A Geas also ends when its time is up, when you cannot pay the upkeep, when either of you dies, when you have been offline for 10 minutes, if you lose Specialization, or when you release it with `/nen geas release`. The bound player can be freed by an Exorcism or a Meditation Stone cleanse (see [Cursed Items](Cursed-Items)), with no penalty. It survives a server restart.
+
+## Final Pledge
+
+Nen level 40. The Final Pledge is one minute of enormous power, paid for with your whole build. You swear it in two steps, on purpose, and no command or other route can swear it for you.
+
+1. Choose it in the vows screen. A warning page lists every cost with the server's numbers. Press **I understand**.
+2. A button appears. **Hold** it (or Space) for 3 seconds. Letting go early does nothing.
+
+It takes a player-wide vow slot, so by default you must first revoke a training or last oath you hold. You cannot swear it while meditating, in a drill, trial or exam, or lying still.
+
+**For 60 seconds:**
+
+- Your maximum aura and its regeneration are tripled, and your tank is filled.
+- Your abilities are twice as strong (the cap on potency rises to 4 if it is lower) and recover in half the time.
+- Nothing can Exhaust you: running out of aura still ends your abilities and techniques, but with no Exhaustion, no Overuse and no Vow Lockout. Nen Severed from an enemy still works.
+- Your aura looks brighter and fiercer to everyone who can see it. Wrath and Second Beat do not work while it lasts.
+
+**Then it ends, and you pay:**
+
+- Your Nen is wiped as on a death that loses Nen. You keep your Nen type and your signature Hatsu (dormant until you awaken again), and lose your level, your abilities, your techniques, your other vows and your Hunter License.
+- You are left at 1 health, and **Spent** (slower and weaker, like Slowness I and Weakness I) for 10 minutes by default.
+- You cannot awaken again for 7 real days.
+
+If you die during the pledge it is still counted as a wipe death, once. Logging out ends the pledge on the spot. You earn the **Everything I Had** advancement when you swear it. A server can turn it off with `finalPledgeEnabled`.
+
 ## Breaking a vow
 
 The first slip is only a warning, called a strike. The second break applies the penalty, and the vow stays broken, so you cannot swear it again on that ability until the lockout or seal ends.

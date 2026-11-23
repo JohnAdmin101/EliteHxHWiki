@@ -69,6 +69,42 @@ Training in a type holds at point 5 and again at point 10 (see [Nen Types and Af
 
 Passing a trial gives no XP and no training units. It opens the next stretch of training for that type, says so in chat, and earns the **Breaking Through** advancement the first time. Failing is like failing the drill. The server can change the gates with `proficiencyTierPoints` and the difficulty with `tierTrialScale`.
 
+## Training by holding Ren
+
+Holding Ren earns a little Nen XP as it runs, 1 XP per second by default (`renTrainingXpPerSecond`). Two limits keep it from being a way to level while away from the keyboard:
+
+- **A daily cap.** It pays at most 600 XP per Minecraft day (`renTrainingDailyCap`). It counts the XP you really got, after the usual per-minute limit. A line in chat tells you when the day's share is used up.
+- **An idle gate.** It pays nothing once you have gone 60 seconds without turning your view by 10 degrees or moving a block (`renTrainingIdleSeconds`). Move or look around and it pays again.
+
+## Lived Properties
+
+What you have endured shapes your Nen. There are four properties: **fire**, **shock**, **frost** and **venom**. Each is a meter of endured units that only grows by suffering the real thing.
+
+**Building it up.** While you are awakened, in survival and have no aura defense up (Ten, Ken and the like), every point of health you lose to one of these counts as one unit:
+
+| Property | What counts |
+| --- | --- |
+| Fire | Fire, lava and hot floors |
+| Shock | Lightning and Nen shock |
+| Frost | Freezing and powder snow |
+| Venom | Poison (the effect; a harming potion is not venom) |
+
+You can bank at most 40 units a day (`livedDailyCap`), and nothing counts while you are idle (the same gate as Ren above). The action bar tells you how far you are: "You endure the fire: 12 of 40 today". When another player helps you along, with an Element hit or a Shock Edge arc of their ability, you bank 2 units for each application, whatever its damage. Nothing counts inside a [Tower](Tower-Arena) match.
+
+**Tiers.** The tier is read from the units, and the game tells you when you cross one ("fire is now Felt to you").
+
+| Tier | Units | What changes |
+| --- | --- | --- |
+| Felt | 40 | You may pick that property for an Element effect in the [Hatsu](Hatsu#lived-properties) forge. |
+| Known | 200 | Your Element effects of that property last 1.25 times as long. |
+| Second Nature | 600 | They last 1.5 times as long, and you take 20% less damage of that kind. |
+
+The status screen (**N**) has a "Lived Properties" block with a line for each property: its tier, units and what is left to the next tier, and today's total.
+
+**Shock charge.** Once shock is Felt, the shock you endure also fills a **charge** pool, which holds 100. Every point of shock damage adds 10, and it fills even when you cannot bank any more units today, but not while you have aura defense up. A shock ability (Shock Edge, Godspeed, or your own Hatsu with the shock Element) then pays half of its aura from the charge and hits 1.15 times as hard while you have some. The charge is spent only after the ability goes off, and is not given back. It does not work in a Tower match. You keep it when you log out and when you die with your Nen kept. The panel HUD shows it as a small bar.
+
+A server can switch the whole feature off with `lived.enabled`.
+
 ## For servers
 
 The wait and the XP are set in the server config: `drillRetrySeconds`, `drillTenXp`, `drillRenXp` and `drillGyoXp`. Setting the XP to 0 keeps the drill as pure practice. See [Server Owners](Server-Owners).

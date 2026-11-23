@@ -19,9 +19,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Rotation;
+import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.RegisterGameTestsEvent;
+import net.neoforged.neoforge.network.registration.ChannelAttributes;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
@@ -39,6 +43,21 @@ public final class ExampleNenAddonGameTests {
         FUNCTIONS.register(SPARK_FIST_IS_READY.getPath(), () -> body);
         FUNCTIONS.register(modEventBus);
         modEventBus.addListener(ExampleNenAddonGameTests::onRegisterGameTests);
+        // Elite HxH requires Curios, which sends its sync payloads to every player a datapack sync reaches without checking
+        // the connection. A mock player's connection has no negotiated channels, so declare Curios' ones ad hoc first.
+        NeoForge.EVENT_BUS.addListener(EventPriority.HIGHEST, ExampleNenAddonGameTests::declareCuriosChannels);
+    }
+
+    private static void declareCuriosChannels(OnDatapackSyncEvent event) {
+        event.getRelevantPlayers().forEach(player -> {
+            if (player.connection != null) {
+                var channels = ChannelAttributes.getOrCreateAdHocChannels(player.connection.getConnection());
+                for (String path : new String[] {"sync_data", "sync_curios", "sync_modifiers", "sync_render", "sync_stack",
+                        "sync_active", "break", "grabbed_item", "server_page", "quick_move"}) {
+                    channels.add(Identifier.fromNamespaceAndPath("curios", path));
+                }
+            }
+        });
     }
 
     // makeMockServerPlayerInLevel is marked for removal in 26.3 but is still the game tests' way to get a server player.

@@ -1,6 +1,6 @@
 # Nen Beasts
 
-A Nen beast is a creature made of your own aura. It follows you, fights beside you and costs you aura while it lasts. It is not a pet: it lives only as long as the ability that made it, it is never saved, and it is gone the moment you lose your focus.
+A Nen beast is a creature made of your own aura. It follows you, fights beside you and costs you aura while it lasts. A summoned beast is not a pet: it lives only as long as the ability that made it, it is never saved, and it is gone the moment you lose your focus. If you want a beast that stays, you can win one over from the wild (see [Taming a wild beast](#taming-a-wild-beast)).
 
 ## The three beasts
 
@@ -37,7 +37,7 @@ Once you have learned Bound Familiar, a Conjuration user can forge the Beast for
 
 - **Summon.** Press the ability's key. The beast appears next to you. You can have one beast out by default, one for each ability.
 - **Dismiss.** Press the key again. The beast dissolves and the ability's cooldown starts.
-- **Order.** Crouch and press the key while the beast is out. If you are looking at a creature within 16 blocks, the beast goes for it. If you are looking at nothing, it drops its target and comes back to you. Your own beast and pets do not block the line. A creature you may not hurt, or one you cannot see, is not accepted.
+- **Order.** Crouch and press the key while the beast is out. If you are looking at a creature within 16 blocks, the beast goes for it. If you are looking at nothing, it drops its target and comes back to you. Your own beast and pets do not block the line. A creature you may not hurt, or one you cannot see, is not accepted. For more orders, use the [beast command wheel](#the-beast-command-wheel).
 - **No Ten needed.** The beast stays if you stop holding Ten.
 
 The upkeep is more than Ten gives back (2 aura a second), so you cannot hold a Bound Familiar or a Strung Beast forever by standing still.
@@ -75,8 +75,64 @@ Not every beast is yours. On some nights a **wild Nen beast** walks the Overworl
 - **Reward.** Experience, and a small chance (10% by default) that a beast you kill drops a Nen Manual. Aura Read on it shows its type and level.
 - **Eggs and commands.** A Wild Nen Beast Spawn Egg is in the Nen creative tab.
 
+## Taming a wild beast
+
+A wild Nen beast does not have to be killed. If you know **Beast Bond**, a Manipulation ability you learn from a Nen Manual (see [Abilities and Nen Manuals](Abilities-and-Nen-Manuals)), you can win an aura contest against it and keep it. A tamed beast is not like a summoned one: it follows you, survives logging out, dying, restarts and changing dimension, and it is yours until the bond ends.
+
+| Beast Bond | |
+| --- | --- |
+| Type | Manipulation (a toggle) |
+| Aura | 30, plus 6 per second while the contest runs |
+| Cooldown | 60 s |
+| Memory | 4 |
+| Lowest level | 10 |
+
+**How the contest goes**
+
+1. Look at a wild beast within 8 blocks and press the key. The beast must be weakened to half its health or less, and it cannot be above your Nen level.
+2. Stay close and in sight. A bar on your action bar shows the progress, and a tether of aura links you to the beast. The beast keeps fighting you, and every hit you take sets the contest back.
+3. A Manipulator wins in about 3 to 6 seconds. Another type needs up to two and a half times as long.
+4. If you win, the beast is yours. You are given the advancement Kindred Aura for your first.
+
+It is refused, and costs nothing, if there is no wild beast in sight, if it is too healthy or too high a level, if your roster is full, if the beast is already bonded once or is resisting you, if another player is binding it, or if you are in Zetsu. It is also refused when taming is off on the server.
+
+**If the contest fails.** Giving up (press the key again), being driven out of range or sight for a second, turning on Zetsu, or the beast dying all end it. The aura stays spent and the cooldown still runs, you earn no mastery, and the beast resists you for a minute. A beast that has been bonded once can never be bonded again.
+
+**The cost.** Each bond holds back 10% of your maximum aura for as long as it lasts, whether the beast is out or not. You can hold one bond by default. All bonds together never hold back more than 80%.
+
+**Living with a tamed beast**
+
+- It keeps its type, level, body and colour. It heals slowly when it is not fighting.
+- It fights for you the same way a summoned beast does. Every limit on you applies to it, and it never attacks an unawakened player unless that player hurt you in the last 5 seconds.
+- It is unseen unless you are awakened, and only awakened players and spectators see it. The server's "show to everyone" setting does not apply to it.
+- Nobody can hurt it if they could not hurt you. You never can.
+- It waits, unseen, while you are logged out, in a Nen-sealed zone or in the Tower. It holds still while you are dead, in Zetsu, or under an effect that stops your abilities (Exhaustion, a Vow Lockout, Aura Severance or Silence).
+- **If it dies,** the bond ends for good and you lose 20% of the aura you have at that moment. If you forget Beast Bond or your Nen is reset, the bond breaks and the beast turns wild where it stands.
+- With a tamed beast out and no wild beast in sight, crouch and press the Beast Bond key to switch it between Follow and Stay. A plain press shows its status.
+
+## The beast command wheel
+
+Both tamed and summoned beasts take orders from one key, **Beast orders** (see [Controls](Controls)).
+
+1. Press it. A picker opens with **All** at the top and your own beasts around it: the nearest 7 within 48 blocks by default. Each shows its body, its name ("(summoned)" for a summoned one) and a health bar. The beast under your crosshair is highlighted. With none near, All is dimmed and says "No beasts nearby".
+2. Pick All or one beast. The order wheel opens for that choice.
+3. Pick an order.
+
+| Order | What it does |
+| --- | --- |
+| Follow | Comes with you. |
+| Stay | Holds where it is. It will not wander more than a couple of blocks, and it sits down when it stands still. |
+| Attack | Goes for the creature you look at, up to 16 blocks away. |
+| Recall | Calls every tamed beast to you and puts it on Passive. Tamed only. |
+| Passive | Never attacks, not even to defend itself. |
+| Defend | Fights what hurt you or it. This is the usual state. |
+| Hunt | Looks for hostile mobs within 12 blocks and attacks them. Never goes for a player. |
+| Release | Ends the bond and lets the beast go. Tamed only, and you must be crouching. |
+
+With one beast chosen, the wheel marks its current order and stance. A summoned beast cannot be recalled or released: it answers "Summoned beasts cannot do that". A summoned beast's order and stance last only as long as that use. Recall has a 10 second cooldown. You can only command your own beasts in the same dimension, and a beast further than the command range does not hear you. A beast on Stay still ends its use if it strays too far (see What ends a beast).
+
 ## For server owners
 
-Four keys in `server.toml`: `nenBeastsEnabled` (true) turns beasts on and off, and turning them off ends the ones already out; `maxActiveBeasts` (1, up to 4) is how many beasts one player holds, one for each ability; `beastDeathAuraLoss` (0.2) is the share of aura lost when a beast is killed; `beastsVisibleToAll` (false) shows beasts to every player. Per-beast numbers (`health`, `hit`, `speed`, `maxBeastScale`) are in `abilities.toml`. Wild beasts have two more keys: `wildBeastSpawnChance` (0.1; 0 means none spawn naturally) and `wildBeastManualChance` (0.1).
+Four keys in `server.toml`: `nenBeastsEnabled` (true) turns beasts on and off, and turning them off ends the ones already out; `maxActiveBeasts` (1, up to 4) is how many beasts one player holds, one for each ability; `beastDeathAuraLoss` (0.2) is the share of aura lost when a beast is killed; `beastsVisibleToAll` (false) shows beasts to every player. Per-beast numbers (`health`, `hit`, `speed`, `maxBeastScale`) are in `abilities.toml`. Wild beasts have two more keys: `wildBeastSpawnChance` (0.1; 0 means none spawn naturally) and `wildBeastManualChance` (0.1). Taming has three more: `beastTamingEnabled` (true; off means no new bonds, and tamed beasts wait unseen), `maxTamedBeasts` (1, up to 4) and `tamedBeastAuraReserve` (0.1, the share of maximum aura each bond holds back). `commandRange` (48, 8 to 128) is how far from you a beast still hears an order.
 
 Authors can add their own beasts and bodies. See [Addons](Addons).

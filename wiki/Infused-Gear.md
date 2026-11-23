@@ -30,6 +30,10 @@ Your Nen type decides the imprint. Specialists choose any of the five in a dialo
 
 Mending works faster with each grade (every 4 seconds at grade 1, about every 1.5 seconds at grade 3) and costs 1 aura for every point it repairs; with no aura it stops. Charged hits are real Nen hits: they obey teams, claims, Nen-sealed zones and vows, and two Charged players trading blows do not set each other off in a chain. Only direct melee strikes count, not arrows, thrown things, beams or sonic booms. Swapping a piece out of your hand and back does not reset these waits.
 
+## Accessories
+
+A ring, necklace, charm, bracelet or belt worn in an accessory slot can take the ritual too, and counts as a piece while worn. It pays upkeep like any other piece. If you wear more pieces than the limit allows, your main hand and armor win and the accessories sleep first. See [Accessories](Accessories).
+
 ## Making a piece stronger
 
 Do the ritual again on a piece you made and its grade goes up by one, as far as your Nen level allows. By default grades 1 to 5 need Nen levels 15, 20, 25, 30 and 40. At the ceiling the stone tells you your Nen cannot take the piece any further yet. Only the maker can raise a grade; anyone else who is awake and high enough can only infuse a blank piece, and then it is theirs.

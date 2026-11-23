@@ -92,6 +92,34 @@ From the start of the charge until 1 second after the strike (or after the 3 sec
 
 If upkeep drains your aura to zero, everything shuts off at once: running abilities end, then your techniques turn off, and **Nen Exhaustion** hits you for 10 seconds. Exhaustion slows you by 20% and stops you switching on any technique until it ends. Watch your aura bar when you keep several techniques on.
 
+## Nen Wounds
+
+A heavy Nen hit from another living thing can leave a **Nen Wound** on a player. A wound is a lasting injury: it is not aura, it is health.
+
+**When a hit wounds.** The hit must be a Nen hit (an ability, a technique or a Hatsu) that does at least 6 damage after everything has been taken off. How much you can take before it wounds depends on how you stand:
+
+| You have | A hit must do |
+| --- | --- |
+| Nothing special up | 6 damage |
+| Ken, or Ryu leaning to defense (offense 50% or less) | 9 damage |
+| Zetsu | 3 damage |
+| Ko armed | 3 damage |
+| Zetsu and Ko armed together | 1.5 damage (the changes multiply) |
+
+The same attacker can add a stack to the same player only once every 10 seconds. Players in creative or spectator are never wounded, and the wound itself never kills you.
+
+**What it does.** Each stack (up to 3) takes one heart off your maximum health (never below half a heart) and cuts your ordinary healing by a quarter: regeneration, potions and golden apples all slow down. Healing from Nen abilities is not cut. The wound lasts 10 minutes, and each new stack restarts the clock. Milk, totems and `/effect clear` do not remove it.
+
+**Closing it.** A Nen ally can tend it: Restore closes one stack on each ally it heals, and Vital Surge closes one on its ally when it runs to the end. Your Meditation Stone's Cleanse, an Exorcism, an Aura Severance cleanse by an ally, and death all end it. The Nen reset of an admin does too.
+
+Gyo shows a wound to others as dark red dust over the chest, one to three puffs by stacks, if they could see you at all (Zetsu hides it, In hides it unless the viewer has Ren on). The terminal shows your wounds too: see [Hunter Terminal](Hunter-Terminal-and-Bounties).
+
+A server can turn wounds off with `woundsEnabled`, or tune them in the `wounds` section of the config.
+
+## How much you can have out at once
+
+Every technique and ability that is running draws on a third number besides your aura tank: your **Output**, how much aura per second you can have out at the same time. Hold too many things at once and your upkeep rises and strain builds. The full story is on [Output Ceiling](Output-Ceiling).
+
 ## The technique wheel (R)
 
 Press **R** and a ring of eight slots opens. From the top, clockwise: Ten, Ken, Ryu, Shu, Gyo, In, En and Zetsu. Ko is not on the wheel: it is a hold, so it has its own key, like Ren. Shu is on the wheel and also has its own key, for switching it mid-fight.

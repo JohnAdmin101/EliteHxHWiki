@@ -1,6 +1,6 @@
 # Controls
 
-All of the mod's keys are in one place: Options, Controls, in the **Nen** category. You can rebind every one. Only four have a default key. The rest are left unbound on purpose, because the technique wheel is the main way to use techniques and extra default keys would clash with vanilla and with other mods.
+All of the mod's keys are in one place: Options, Controls, in the **Nen** category. You can rebind every one. Only five have a default key. The rest are left unbound on purpose, because the technique wheel is the main way to use techniques and extra default keys would clash with vanilla and with other mods.
 
 ## Keys
 
@@ -10,6 +10,8 @@ All of the mod's keys are in one place: Options, Controls, in the **Nen** catego
 | Technique wheel | R | Technique wheel | Opens the wheel to switch Ten, Ken, Ryu, Gyo, In, En and Zetsu. Works once you are awakened. |
 | Ren (hold) | C | Ren (hold) | Hold to flare your aura with Ren. Release to stop. |
 | Binding screen | K | Ability slots | Opens the screen where you bind abilities to slots, forget abilities and rename your Hatsu. |
+| Beast orders | H | Beast orders | Opens the beast order wheel, where you tell a Nen beast you have out what to do. Works for any living player in the world; if you have no beast, the server says so. See [Nen Beasts](Nen-Beasts). |
+| Explain ability | none | Explain ability | Explains the first ability you swore the Open Hand Oath on to the player or Nen user in your crosshair. Works once you are awakened. `/nen explain` does the same. See [Vows](Vows). |
 | Vows screen | none | Vows | Opens the vows screen. The Vows buttons in the hub and the binding screen do the same. |
 | Nation map | none | Nation Map | Opens the nation claim map, centred on you. `/nation map` does the same. Works before you awaken. |
 | Add waypoint | none | Add waypoint | Adds a private map waypoint where you stand, in the next colour. Works before you awaken and only while nations are on. See [Nations](Nations#waypoints-and-the-map). |
@@ -26,6 +28,8 @@ All of the mod's keys are in one place: Options, Controls, in the **Nen** catego
 | Ability slots 1 to 6 | none | Ability slot 1 to 6 | Uses the ability bound to that slot. |
 
 The toggle keys act once per press, however long you hold them. Ryu is the exception: it acts when you let go of the key, and only if you did not turn the wheel while holding it (a hold that scrolled moves the split and leaves Ryu as it was). While the Ryu key is held and Ryu is on, the wheel moves the split and the hotbar does not scroll. Ko works like Ren: hold it to charge, let go to arm it. A slot key also acts once per press. For charge and channel abilities (Aura Bolt, Aura Tether), hold the key and release it.
+
+Everything else the newer systems add has no key of its own. You use the Hunter Terminal, the ATM, the Registrar, the Aura Pot, antiques and the accessory slots by using the block, person or item itself, as the page for that system describes. The Curios screen holds the accessory slots. En has one more control: while En is on, sneak and turn the mouse wheel to change the shape of its field (sphere, cone, tendril), or use `/nen en shape`.
 
 In creative mode, vanilla's save-hotbar key is also **C**. Rebind either one if they get in each other's way.
 
@@ -68,4 +72,4 @@ You can change how the Nen HUD looks and where it sits. Open the Mods menu, pick
 
 ## Chat commands
 
-Players have one `/nen` command: `/nen me` prints your own Nen. The rest are for operators. See [Server Owners](Server-Owners).
+`/nen me` prints your own Nen. A few more `/nen` commands are for every player: `/nen en shape sphere|cone|tendril` (the shape of your En field), `/nen explain [ability]` (the Open Hand Oath), `/nen geas release` (a caster lets a bound player go) and `/nen tower leave|forfeit` (leave the gallery, or give up a live Tower match). `/nation` is for every player too. The rest are for operators. See [Server Owners](Server-Owners).

@@ -55,7 +55,7 @@ A form is open to you when it matches your type, or when you have learned the pr
 
 ### Effects
 
-Impact (raw damage), Shockwave (knockback), Element (fire, shock or frost), Bind (slow, then root), Pull or push, Command (a struck mob attacks another creature near it), Mark (reveal the target, even through walls, and make later hits on it stronger), Drain (move aura from the target to you), Restore (heal you and teammates close by), Barrier (absorption hearts), Echo (the effect repeats once, at half damage) and Condition-bound (stronger against one kind of target, weaker against everything else).
+Impact (raw damage), Shockwave (knockback), Element (fire, shock, frost or venom, each only once you have lived through it; see [Lived Properties](#lived-properties)), Bind (slow, then root), Pull or push, Command (a struck mob attacks another creature near it), Mark (reveal the target, even through walls, and make later hits on it stronger), Drain (move aura from the target to you), Restore (heal you and teammates close by), Barrier (absorption hearts), Echo (the effect repeats once, at half damage) and Condition-bound (stronger against one kind of target, weaker against everything else).
 
 Newer effects: Lifesteal (heal a share of the damage dealt), Haste (Speed and Haste for you), Cleanse (remove your harmful vanilla effects, not Nen ones), Blink (teleport to where the Hatsu lands, only to a safe spot in view), Weaken, Gravity (lift or slam the target), Disarm (a mob loses its weapon, which drops only if the mob would always drop it; a player's held item swaps with another hotbar slot), Erode (ignores half of the target's Ren and Ken), Terrain (dig soft blocks or raise plain ground, never copying ore, where it lands), Grow (bonemeal crops, stems, berry bushes and cocoa where it lands), Silence (the target cannot use abilities for a few seconds; techniques still work), Conceal (hide from En and from mobs for a few seconds; Gyo still sees you) and Decoy (a false copy of you that draws hostile mobs). Blink, Terrain and Grow act where the first stage lands, so they need a form that can lead a chain, and Terrain and Grow never change blocks in a claim you may not build in, in a Nen zone, in spawn protection or where another protection mod says no, nor on bedrock and obsidian.
 
@@ -94,9 +94,45 @@ In the forge, a strip under the name box shows the stages. Click one to edit it,
 
 ### Triggers
 
-Instant (fires on press), Charge (hold to scale the power; a full charge hits a quarter harder than Instant), On-hit (fires on your next melee hits, up to 3 per use), Conditional (fires only when a condition holds: low health, a marked target or night, and cheaper because of it) and Delayed (fires on press, but takes hold 3 seconds later; only for a form that takes Delay).
+Instant (fires on press), Charge (hold to scale the power; a full charge hits a quarter harder than Instant), On-hit (fires on your next melee hits, up to 3 per use), Conditional (fires only when a condition holds: low health, a marked target or night, and cheaper because of it) and Delayed (fires on press, but takes hold 3 seconds later; only for a form that takes Delay). **Laid Terms** is a trigger of its own kind: see [Laid Terms](#laid-terms) below.
 
 **Armed triggers** do nothing at the press except arm your Hatsu for a while; it then fires by itself when its signal comes, with a pause of half a second between fires. Pulse fires every 4 seconds (3 times in 20 seconds), On hurt when you lose at least 1 health (3 times in 20 seconds), On kill when you kill a creature (3 times in 30 seconds), Last stand once when your health falls to 30% or less (within 60 seconds) and On landing when you land from a fall of 3 blocks or more (3 times in 30 seconds). Arming costs aura and upkeep, but each fire is free. Projectile, Beam, Wave, Field, Touch and Self-empower can be armed; the Melee rider, Tether, Construct, Beast, Trap and Orbit cannot. A Hatsu never sets off its own armed Hatsu (a server can allow that with `hatsuReactiveDepth`), and nothing fires while you are in Zetsu or a Nen zone, or under Vow Lockout, Nen Exhaustion, Nen Severed or Silence.
+
+### Gambler's Draw
+
+Gambler's Draw is a modifier for a build of two or three stages. Put it on the first stage and the build stops being a chain. Each use **draws** one of its stages at random, and the next press fires that stage alone, harder. It belongs to Conjuration, and like every modifier it is closed until you unlock it in the Compendium.
+
+1. **The draw.** The first press pays the aura cost of your dearest stage and picks a stage, each with the same chance. Nothing fires and no cooldown starts. You see "Drawn: stage N, <form>" and the slot shows N. Nobody else sees the number.
+2. **The fire.** The second press fires the drawn stage on its own, as if it were the first stage, at 1.25 times the power (`hatsuDrawPotency`). It costs no more aura, and the cooldown (the longest stage's) starts now.
+
+While a draw waits, your other Hatsu slots cannot be used and show dimmed on the bar (`hatsuDrawLocksSlots`). Ten, Ren and your normal abilities still work. You cannot rework that slot until you fire the draw. The draw survives logging out and ends, with a notice, when you die or when the build stops being valid.
+
+The rules are strict, and the forge tells you which one a build breaks:
+
+- Only the **Instant** and **Conditional** triggers work with it.
+- Every stage needs at least one effect.
+- Every stage must be a form that fires at once: Projectile, Beam, Wave, Touch or Trap. Melee rider, Tether, Construct, Field, Orbit, Self-empower and the Nen beast form are refused on any stage.
+- It cannot be combined with Laid Terms.
+
+A server can turn it off with `hatsuDrawEnabled`.
+
+### Laid Terms
+
+Laid Terms is a trigger for a build that waits for conditions on one target. You choose 2 to 4 different **terms** in the builder, in the order they must happen. It costs no extra aura, and it is a free part. The more terms you lay, the harder the shot hits when they are all met: 1.25 times with two terms, 1.5 times with three and 1.8 times with four (by default; your potency cap still applies).
+
+| Term | When it is met |
+| --- | --- |
+| Touch | You hit the target with an empty hand. |
+| Told | You have explained this same ability to the target (see [Open Hand Oath](Vows#open-hand-oath)). |
+| Met Eyes | You and the target look at each other for a second, within 8 blocks. A mob counts when it is targeting you. |
+| First Blood | The target hurts you first. |
+| Kept Close | The target stays within 6 blocks of you, in sight, for 20 seconds in total. |
+
+**Using it.** Look at a living target within 32 blocks and press the slot. That names the target and lays the terms: it costs nothing and starts no cooldown. You can name a player only where PvP is allowed. The terms count only in order, and all of them must be met within 5 minutes. The action bar shows each one as it is met, and a player you named sees "A term has been laid on you", without your name. When the last one is met, press the slot again to fire the Hatsu at the higher power. That use can strike only the named target. Firing spends the terms. Sneak and press to drop them.
+
+Zetsu, a Nen zone around either of you, Vow Lockout and Nen Severed pause the terms and stop the shot, but do not clear them. Logging out, dying (either of you), changing dimension, reworking the slot and an Exorcism on the target clear them. The slot shows how many you have met, for example "1/3".
+
+A server can switch it off with `hatsuTermsEnabled`.
 
 ### Memory and overcharge
 
@@ -111,11 +147,38 @@ Parts that arrived after the first builder (the Touch, Beam, Wave, Trap and Orbi
 - **Refunds.** At a Meditation Stone, the Refund button gives back every part you bought that none of your Hatsu uses, then you wait 3 in-game days (a server can change this) for the next one. A part a Hatsu uses is never refunded.
 - **Your old Hatsu.** A Hatsu you forged before the Compendium keeps working and keeps its parts, free, and a rework may keep them too. Taking up a Nen Will never needs the unlock either.
 
+## Lived Properties
+
+Some effect options are not open to you until you have lived them. Element has four: fire, shock, frost and venom. You may pick one in the forge (or in a rework) only when you have reached **Felt** in that property, which means you have endured enough of it. If you have not, the forge says "You have not lived through fire yet." Nothing else is gated: Hatsu you forged before this existed, a Nen Will you inherit and a rename all work as before.
+
+How to build the property up, and what it gives you besides, is on [Training Drills](Training-Drills#lived-properties). Venom adds Poison I for 4 seconds by default.
+
 ## Several Hatsu
 
 You can forge up to three Hatsu, one for each slot. The slots open at Nen level 15, 30 and 45 (a server can change this, or allow fewer slots). The trial is taken once and covers every slot. Open the Meditation Stone and the builder shows three tabs: a locked tab says when it opens, an empty one starts a new forge, and each slot keeps its own build, name, mastery and vows. You can forge them in any order.
 
 The Hatsu run together: each has its own cost, cooldown and upkeep, and each is bound to the ability bar on its own. The same part does not stack with itself across Hatsu (two Self-empowers give the stronger one, not both), but different parts add up. All of your Hatsu share one memory pool, so a second and third build need room left over. If a server later closes a slot, that Hatsu is suspended until it opens again; it is never deleted. Reworking one slot does not touch the others.
+
+## Combined Hatsu
+
+Two allies can fuse two casts into one burst that carries both of their Nen types.
+
+1. **Link.** Crouch with an empty main hand and Ren on, and use it on an awakened ally (a teammate or someone in your nation). They get a dialog and have 30 seconds to accept. Each of you can be linked to one person at a time.
+2. **Cast together.** While linked, both of you use an ability that costs aura, within half a second of each other (10 ticks). Free uses never count. The two casts become one burst at the point where the first of them lands, or about 16 blocks ahead of you if it has no target. Both casts still happen as usual; the burst is on top.
+3. **Burst.** It hits everything near that point except the two of you, your allies and Training Dummies, and only what PvP allows you to hit. Each of you adds one effect for your type:
+
+| Type | What it adds |
+| --- | --- |
+| Enhancement | Damage: 4, at normal power (it scales with both casts' power) |
+| Transmutation | Slowness II for 2 seconds |
+| Emission | A wider burst: 3 blocks more radius (3 blocks to start) |
+| Manipulation | Pulls targets toward the centre |
+| Conjuration | Roots targets for 1 second |
+| Specialization | Nothing of its own, but your partner's effect is 1.5 times as strong |
+
+The same type twice adds its effect twice. A burst with no damage from either type still deals 2 damage at normal power. The damage follows `hatsuPvpMultiplier`, no vow bonus reaches it and it earns no XP. The burst shows in both of your colours, and each of you sees your own colour (others see both only with Gyo).
+
+The link ends after 5 minutes (a server can change that), if you move more than 24 blocks apart, when either of you logs out, dies or changes dimension, or when you stop being allies. Two linked allies can fuse once every 30 seconds. The server can turn the whole thing off with `combinedEnabled`.
 
 ## Changing it later
 

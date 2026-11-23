@@ -27,6 +27,19 @@ The action bar says why. The usual reasons are:
 - You are under Nen Exhaustion (your aura hit zero) or Vow Lockout (you broke a vow). Both wear off with time.
 - It is not bound. Press **K**, click the ability, then click a slot, and make sure the slot has a key (they are unbound at first).
 - The slot is locked. [Abilities and Nen Manuals](Abilities-and-Nen-Manuals) lists the level that unlocks each slot.
+- You are drawing aura faster than your Output ceiling allows. Running abilities, beasts and infused gear all count against it, and past the overdraw limit a new technique is refused. Turn something off, or train your Output. See [Output Ceiling](Output-Ceiling).
+
+**An ability or a property option is greyed out or locked.**
+Lived Properties unlock from what you endure: fire, shock, frost or venom damage builds up a property over time. Reaching Felt opens that property as an Element option; the later tiers make it last longer and let you resist it (see [Training Drills](Training-Drills)). A server can turn the system off. Pages on a specific ability say which property it uses.
+
+**My Hunter Terminal, ATM or Tower Registrar shows nothing.**
+The server may have switched that system off, or you may need a Hunter License for the terminal. See [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties) and [Tower Arena](Tower-Arena).
+
+**Where do antiques come from?**
+They turn up in some loot chests, from brushing suspicious blocks, and from a Cartographer of level 2 or higher (licensed Hunters only), and as an Unexamined Lot from a Wandering Hunter. Study one with Gyo, then sell it to a Wandering Hunter. See [Maker's Trace](Makers-Trace).
+
+**What are Jenny, and how do I get them?**
+Jenny is the mod's money, kept in a Wallet and a bank account. You earn it from bounties, the Tower, Rogue Nen Users, Hunters and appraisals. At an ATM you can spend Jenny on emeralds, but not the other way round. See [Hunter Terminal and Bounties](Hunter-Terminal-and-Bounties).
 
 **I read a manual and it did nothing.**
 The message in the action bar tells you why. The common answers are: you have already learned that ability, you do not have enough memory, or you have not awakened yet. See [Abilities and Nen Manuals](Abilities-and-Nen-Manuals).
@@ -87,23 +100,36 @@ The effects and the aura are drawn by your own game, and you can scale them down
 | `showAbilityBar` | true | Set to false to hide the ability slots. |
 | `showAbilityPanel` | true | Set to false to hide the ability info panel. |
 | `showXpStrip` | true | Set to false to hide the Nen XP bar in the panel, or the thin strip in CLASSIC. |
+| `showOutput` | true | Set to false to hide the Output strip under the aura bar. |
 | `unlockToasts` | true | Set to false to stop the pop-ups for level-ups, new slots and vow warnings. |
 | `jennyPickupLine` | true | Set to false to hide the +250 Jenny line that shows beside the crosshair when Jenny goes into your wallet. |
 | `matchStrip` | true | Set to false to hide the names, points and clock at the top of the screen during a Tower match. |
 | `lowAuraWarning` | 0.2 | The aura fraction below which the aura bar pulses (0 to 0.5). 0 turns it off. |
 | `panelTextScale` | 1 | Size of the text in the status panel and the ability info panel (1 to 1.5). The panel shrinks to fit if it grows too big. |
 | `typeGlyphs` | false | Set to true to draw a small icon of your Nen type beside the aura bar, on a running ability slot and in the hub. |
-| `reducedMotion` | false | Set to true to open the technique wheel in place, hold the low aura warning still and stop the first person wisp breathing. |
+| `reducedMotion` | false | Set to true to open the technique wheel in place, hold the low aura warning still, stop the first person wisp breathing and turn the screen kick off. |
+| `screenKick` | true | Set to false to remove the small camera kick on your own Ren ignition, a landed Ko hit, being hit by Ko and a heavy Ken block. |
+| `showOtherPlayersLooks` | true | Set to false to draw other players' abilities in each ability's default look instead of the Hatsu look they chose. Your own looks always show. |
+| `techniqueSounds` | ALL | SELF plays only your own technique sounds; OFF plays none. |
+| `nationBorderMessage` | true | Set to false to stop the action bar line that names the land you walk onto. |
+| `nationMapTerrain` | true | Set to false to draw the nation map as flat cells without the ground. |
+| `nationMapCache` | true | Set to false to stop remembering the ground you have seen between sessions. |
+| `nationMinimap` | false | Set to true to show a small map of the claims around you in a corner. |
+| `nationMinimapSize` | 64 | Side of the minimap in pixels (48 to 128). |
+| `nationMinimapCorner` | TOP_RIGHT | TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT or BOTTOM_RIGHT. |
+| `nationWaypointsInWorld` | true | Set to false to hide waypoint names and distances in the world. |
+
+The `[animations]` section of the same file has three switches, all true by default: `enabled` (off stops every Nen body animation), `stances` (off stops only the Ren, Ken, Gyo, En and Ko stances) and `firstPerson` (off keeps vanilla's first person view for your own animations).
 
 The vanilla particle setting does not change any of these, because the effects do not use particles. The abilities work the same with the effects turned off.
 
 ## Servers
 
 **The game stops at start-up and mentions a missing mod.**
-Elite HxH needs GeckoLib on the server and on every client, and Player Animation Library on every client. See [Server Owners](Server-Owners).
+Elite HxH needs GeckoLib and Curios API on the server and on every client, and Player Animation Library on every client. See [Server Owners](Server-Owners).
 
 **I cannot use a /nen command.**
-`/nen me` is for every player. The rest are for operators. See [Server Owners](Server-Owners).
+`/nen me` is for every player, and so are `/nen en shape`, `/nen explain`, `/nen geas release` and `/nen tower leave|forfeit`. The `/nen admin` commands are for operators. See [Server Owners](Server-Owners).
 
 **The Nen Reset Token does nothing.**
 Re-rolling a type is switched off by default. The server owner has to allow it.
