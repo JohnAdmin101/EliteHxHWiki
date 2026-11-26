@@ -30,6 +30,7 @@
 - [Tower Arena](Tower-Arena)
 - [Gourmet](Gourmet)
 - [Maker's Trace](Makers-Trace)
+- [Scattered Set](Scattered-Set)
 - [Bestiary](Bestiary)
 - [Rogue Nen User](Rogue-Nen-User)
 - [Nations](Nations)

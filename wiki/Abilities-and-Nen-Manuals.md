@@ -43,6 +43,7 @@ These are the starting values. A server owner can change them.
 | Ground Breaker | Enhancement | 30 | 12 s | Slam the ground: everything within 4 blocks is hurt and pushed away. |
 | Iron Body | Enhancement | 25, plus 3 per second | 30 s | For up to 20 seconds you take less damage and resist knockback, and move a little slower. |
 | Vital Surge | Enhancement | 15, plus 6 per second | 20 s | Hold up to 5 seconds to heal a teammate in sight within 6 blocks, or yourself if there is none, 2 health a second. |
+| Green Hand | Enhancement | 30 | 30 s | Hold for 3 seconds to push growth in a patch around you: crops within 4 blocks grow 2 stages, saplings take their first step (never becoming a tree), melon and pumpkin stems, sweet berry bushes and cocoa get one nudge, and your hurt tamed animals heal 6 health. Each chunk allows 3 uses of Nen growth a day by default, shared with the Hatsu Grow effect. Taking a hit that hurts you, or letting go early, grows nothing and the aura is spent. Needs Nen level 8. |
 | Elastic Grip | Transmutation | 20, plus 5 per second | 10 s | Hold up to 3 seconds to pull a target in sight toward you. Crouch to pull yourself toward it instead; the grip lets go when you arrive. |
 | Thunder Palm | Transmutation | 25 | 10 s | A burst within 3.5 blocks that hurts everything and stuns what it hits for 1 second. |
 | Godspeed | Transmutation | 30, plus 10 per second | 45 s | For up to 15 seconds you move 40% faster and dodge one melee hit every 3 seconds. |

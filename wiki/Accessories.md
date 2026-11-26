@@ -41,6 +41,7 @@ A ring, necklace, charm, bracelet or belt can take the [infusion ritual](Infused
 - It counts toward the limit of working pieces, together with your main hand and armor. When you are over the limit, your **main hand and armor win** and the accessories go dormant first.
 - It pays upkeep, adds Output load and wears like armor, and its imprint reacts when you are struck, as armor does.
 - It does not get the on-hit effect of a weapon, and it never hardens when its maker dies.
+- Swapping an infused accessory for another of the same item (a ring for a plain ring, say) takes effect at once: the old piece stops working the moment it is out of the slot.
 
 ## For server owners
 

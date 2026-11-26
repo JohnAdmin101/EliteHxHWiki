@@ -53,6 +53,8 @@ Strain survives logging out (it fades for the time you are away) and ends when y
 
 Draw within 80% of your ceiling or more and you train: 1 second of training for each second, up to 600 seconds per Minecraft day. It does not count while you are Exhausted, in Overuse, Nen Severed or in Zetsu. It takes 12 000 seconds in all (20 full days) to earn the whole bonus of 25%. Overdrawing counts, so it is a trade: it is also how you strain. A line in chat appears each time the bonus grows by another 5%.
 
+Output training earns nothing during a Tower match. Swapping one technique for another near your limit (Ken for Ryu, say) is judged by the load after the swap, so it works when it lowers your load. The Output strip is steady even if the server clock is frozen with `/tick freeze`.
+
 ## Wrath
 
 At Nen level 15, a hit that leaves you alive at 25% health or less, or the death of a teammate within 16 blocks, starts **Wrath**. For 10 seconds you have 50% more max aura and 50% more Output ceiling. Then you have 30 seconds of Exhaustion, and you cannot Wrath again for 10 minutes. Players only.

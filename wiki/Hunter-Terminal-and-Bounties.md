@@ -13,7 +13,7 @@ The screen has tabs. Click one, or press Ctrl+Tab to cycle. No tab ever shows an
 | Rankings | Every licensed Hunter, by stars, then points in their specialty. One button cycles through Overall and each specialty. Your own place shows under the list if you are not in the top 20. |
 | Blacklist | Rogue Nen Users near the terminal: a compass direction and a distance rounded to the nearest 32 blocks. Rogues from the Hunter Exam are left out. From stage 3, Broodmother hives are listed here too. |
 | Wanted | Online players who carry a Death Grudge, and players with a bounty on them. Hiding in Zetsu or In does not hide a name. |
-| Record | Your specialty, points, stars, how many points to the next star, today's deed totals, and any Geas or Nen Wound you carry. |
+| Record | Your specialty, points, stars, how many points to the next star, today's deed totals, and any Geas or Nen Wound you carry. It also shows how many Star Tiles are out and which numbers you found first: see [Scattered Set](Scattered-Set). |
 | Tower | The top Tower floors, the Class 200 records and the Floor Masters. See [Tower Arena](Tower-Arena). |
 | Bounties | Your daily contracts. See below. |
 

@@ -6,7 +6,7 @@ Every awakened player has one of six Nen types. You are given it when you awaken
 
 | Type | The idea | A built-in ability |
 | --- | --- | --- |
-| Enhancement | Strengthen the body and what it holds | Hardened Strike: your next melee hit deals extra Nen damage. Pool: Triad Fist, Ground Breaker, Iron Body, Vital Surge |
+| Enhancement | Strengthen the body and what it holds | Hardened Strike: your next melee hit deals extra Nen damage. Pool: Triad Fist, Ground Breaker, Iron Body, Vital Surge, Green Hand |
 | Transmutation | Change what the aura is like | Shock Edge: your melee hits arc to nearby enemies. Pool: Elastic Grip, Thunder Palm, Godspeed, Mending Thread |
 | Emission | Send aura away from the body | Aura Bolt: charge and release an orb that bursts on impact. Pool: Waypoint Gate, Remote Fist, Barrage, Ricochet |
 | Manipulation | Control things and creatures | Aura Tether: hold or pull a target. Pool: Puppet Needle, Calming Touch, Debt Collector, Marionette Self |
@@ -25,6 +25,7 @@ Each type can have a pool of birthright abilities, and awakening gives you one o
 - **Ground Breaker** slams the ground, hurting everything near you and pushing it away.
 - **Iron Body** is a toggle that makes you tougher and harder to knock back, at the price of some speed.
 - **Vital Surge** heals a teammate in sight, or you if nobody is, for a few seconds.
+- **Green Hand** is a short channel that pushes growth around you: crops ripen, saplings take hold and your hurt tamed animals mend. Each chunk allows only a few uses a day.
 
 **Transmutation**
 

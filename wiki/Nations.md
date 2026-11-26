@@ -83,6 +83,23 @@ The King can describe the nation with `/nation describe <text>` (up to 120 chara
 
 `/nc <message>` sends a message to your nation only, and `/nac <message>` to your nation and its allies. Run `/nc` or `/nac` alone to switch it on: an action-bar line tells you, and everything you type in normal chat then goes to that channel until you run the same command again. The switch ends when you log out. Players whose chat is Hidden or set to Commands Only do not receive these messages. The server log records them.
 
+## Lines in the dirt
+
+A line is a scratch on the ground that tells you when someone uninvited walks onto your land. Craft a **Warding Stake** (one flint above two sticks). Use it on the top of a block inside your nation's claim to set the start, then use it on a second block to draw the line. Sneak and use it to clear a start you no longer want. Each line uses one of the stake's 64 uses.
+
+- A line is 2 to 16 blocks long, its two ends are at most 2 blocks apart in height, and every chunk it passes over must be your nation's claim. You cannot draw one in a Nen-sealed zone or in the Tower.
+- You can have 4 lines at a time. If you lose the claim under any part of a line or leave the nation, the line vanishes.
+- A line notices anyone crossing on foot, at a sprint, on a horse or in a boat. Something much faster, such as a diving elytra, can slip over unseen.
+- Sneak and use the stake on a line to remove it. You can remove your own; a member of your nation above the Citizen rank can remove any of the nation's lines.
+- Everyone within 24 blocks sees a line as a faint trail of dust. It is a scratch in the dirt, not aura, so you do not need Gyo to see it and hiding your aura does not hide it.
+
+Crossing is only a crossing for someone uninvited. You, members of your nation, your Nen allies (while you are online), anyone you trusted to build there and players in creative or spectator mode can step over freely. When anyone else crosses:
+
+- They see "You crossed a line." on the action bar.
+- You get an action bar line and a chat line with their name and where they stood, wherever you are. The same line alerts you at most once every 30 seconds.
+- If you are offline, up to 10 crossings wait for you and are listed once when you log in.
+- They are marked to you for 5 minutes. Your next hit on a marked player that lands deals 25% more damage, once, and ends the mark. A hit that is blocked or has no effect keeps it. Nothing glows or shows on the marked player.
+
 ## Spawn and protected zones
 
 Server staff can mark areas, such as the spawn, as protected zones. A zone is not a nation: nobody can join it, it shows no claim limit and it is not in `/nation list`. Walking into one shows its name. By default nobody but staff can build there, players cannot fight, hostile mobs do not spawn and explosions and fire do nothing, but you can still use doors and buttons. Staff can change each rule per zone. The commands are `/nation admin zone create <name>`, `delete <name>`, `flag <zone> ...` and `list`.

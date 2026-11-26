@@ -52,6 +52,7 @@ Start with [Getting Started](wiki/Getting-Started). It walks you through your fi
 | [Tower Arena](wiki/Tower-Arena) | The pocket dimension of refereed matches and the floor ladder |
 | [Gourmet](wiki/Gourmet) | Game animals, the Aura Pot and dishes |
 | [Maker's Trace](wiki/Makers-Trace) | Antiques, studying them with Gyo and appraisal |
+| [Scattered Set](wiki/Scattered-Set) | The numbered Star Tiles hidden in the world, and who finds them first |
 | [Bestiary](wiki/Bestiary) | The creatures of the world |
 | [Hatsu](wiki/Hatsu) | The trial and the forge |
 | [Hunter Exam](wiki/Hunter-Exam) | The Exam Board, the three trials and the Hunter License |

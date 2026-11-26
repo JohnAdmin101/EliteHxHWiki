@@ -23,6 +23,7 @@ To study one you need Gyo on and the antique in your **main hand**. Use it and s
 
 - Moving, being hit, swapping the item, turning Gyo off, entering a Nen-sealed zone, dying, changing dimension or logging out cancels the study, and a canceled study costs you nothing.
 - The reading shows on the antique's tooltip for the rest of your session. It is gone when you log out, so study it again.
+- Holding the use key gives one study, not a stream of them. Let go for more than half a second and press again to start the next study.
 
 A reading may tell you the piece's **depth** (how deep its trace runs, 1 to 5) and its **age** (1 to 4). Your **skill** decides how much you read. A better reader gets each figure exactly more often, and a figure that is not exact is off by one. Your skill grows with your Nen level (up to level 30) and with your Treasure deeds as a Hunter. Past a skill of 0.6 (by default) you can also see a **second aura** hidden in a piece that has one, which is the sign of a hidden piece. A piece without it shows nothing there.
 

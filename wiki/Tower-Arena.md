@@ -28,10 +28,11 @@ Rules in the ring:
 
 - You cannot eat, drink, use potions, eat chorus fruit or throw ender pearls.
 - Totems and Second Beat do not trigger.
+- Shu mastery and Output training earn nothing in a match.
 - Weapons and armour are allowed on every floor.
 - Giving up with `/nen tower forfeit` is a loss. Walking out of the ring, or logging out for more than 15 seconds, is a forfeit too.
 
-Coming home, you get back your position, health, food and effects. Items you tossed in the ring are returned. Vows you broke in the ring stay broken, and any XP you earned is kept.
+Coming home, you get back your position, health, food and effects. Toggle techniques such as Ken, En, Gyo, Shu and In that were on before the match come back on, and they do not add an Output spike. Items you tossed in the ring are returned. Vows you broke in the ring stay broken, and any XP you earned is kept.
 
 ## The ladder
 

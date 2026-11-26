@@ -105,6 +105,10 @@ The status screen (**N**) has a "Lived Properties" block with a line for each pr
 
 A server can switch the whole feature off with `lived.enabled`.
 
+## Shu mastery
+
+Shu mastery (see [Shu](Techniques-and-the-Wheel#shu)) is trained by working with Shu on, not by a drill. Each block you break with the [Trainer's Shovel](Hunters-Arsenal#trainers-shovel) in survival gives 0.02 units by default (`shuMasteryUnitsPerBlock`), and each [Edge Card](Hunters-Arsenal#edge-cards) hit gives 0.05 (`shuMasteryUnitsPerCardHit`). You can hold at most 100 (`shuMasteryMax`) and gain at most 4 a day (`shuMasteryDailyCap`), so full mastery takes a long time. It pays nothing in creative, while you are idle (the same gate as Ren above: a minute with no step and no turn of your view), or with Shu off. A server can switch it off with `shuMasteryEnabled`. It also pays nothing during a [Tower](Tower-Arena) match, and a block dug by your own Hatsu does not count as a dig.
+
 ## Training Dummy
 
 A practice target that shows the damage it takes: each hit, critical hits, the Nen part, and the total and damage per second over a combo. Craft it from 2 hay bales, 2 sticks and a wooden fence: a hay bale on top, then stick, hay bale, stick, then the fence at the bottom. Sneak and punch it with an empty hand to pick it up. Hitting it earns no XP and no training.

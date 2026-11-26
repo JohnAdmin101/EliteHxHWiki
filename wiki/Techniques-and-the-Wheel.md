@@ -49,6 +49,7 @@ Gyo costs 5 aura to start and 2 per second. While it is on you see:
 - Things made of aura that others cannot see, such as the conjured blades and shields, aura bolts and other effects of Nen users. Not the work of someone using In, unless you also have Ren on (see In below).
 - Players who are using In, under the same rules as Zetsu users. Without Gyo you see their aura as nothing.
 - The hidden marks of the Hatsu trial. See [Hatsu](Hatsu).
+- **Star Tiles.** Chests, item frames and dropped tiles that hold a numbered tile give off pale gold motes nearby. See [Scattered Set](Scattered-Set).
 - **Aura residue.** A Nen user leaves a faint trace where they use an ability, release Ko or deal Nen damage, and for 30 seconds after that they leave more as they move. Gyo shows it as dust in the color of their Nen type, for 5 minutes. Crouch and look at one within 5 blocks to read it on the action bar: the Nen type, how old it is and which way its maker was heading. It never names who left it. Nobody leaves residue in Zetsu.
 
 Your eyes glow while it is on, and Ten gives you a little less protection (5% instead of 10%) because some of your aura is in your eyes.
@@ -68,6 +69,8 @@ Shu costs 5 aura to start and 1.5 aura per second, and it only costs anything wh
 - Your plain melee hits do 30% more damage, scaled by your aura potency.
 - You mine 1.5 times as fast.
 - Each point of wear on the held item is skipped half the time. Armor, the off hand and creative mode are not affected.
+
+Shu also has a **mastery** stat, from 0 to 100, that grows from use: mining with the [Trainer's Shovel](Hunters-Arsenal#trainers-shovel) and landing [Edge Card](Hunters-Arsenal#edge-cards) hits. The gain is slow, at most 4 a day by default (`shuMasteryDailyCap`), and nothing counts while you are idle (the same gate as [Ren training](Training-Drills#training-by-holding-ren)), in creative or with Shu off. Mastery only makes Shu cheaper to hold and kinder to your tools: at full mastery Shu's upkeep is 40% lower and an item skips each point of wear 80% of the time instead of 50% (`masteryUpkeepCut` and `masteryWearSkipBonus` in the Shu section of `abilities.toml`, 0.4 and 0.3 by default). It never adds damage, reach or mining speed. You keep it when you die with your Nen kept, and a Nen reset clears it. Once it is above 0 the status screen (**N**) shows "Shu mastery" and today's share. See [Training Drills](Training-Drills#shu-mastery).
 
 Conjured items get the damage and the mining bonus. Arrows and thrown items are not covered, only what is in your main hand. Other players see a soft glow in your type color around the item, and in first person you see it as a soft glow near your main hand.
 
