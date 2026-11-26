@@ -29,7 +29,7 @@ All three files are in `config/elitehxh/`:
 
 Edit the files while the server is stopped, or while it runs: it reloads them. A value outside its range is corrected, with a warning in the log. A file with the same name in `<world>/syncedconfig/elitehxh/` overrides the global one for that world, so edit that copy if a world has one.
 
-Every key, its default and its range are in `docs/config-reference.md` in the mod's repository.
+Every key is written into the config files with a comment, its default and its range.
 
 Hunter stars and specialties have three keys: `starPoints` (deed points in a specialty for tier 1, 2 and 3; default 100, 300, 800), `specialtySwitchDays` (real days between specialty changes; default 7, 0 means no wait) and `hunterDeedDailyCap` (most points one kind of deed adds per UTC day; default 30). Deeds an addon adds through the API are not capped. See [Hunter Exam](Hunter-Exam).
 
@@ -160,6 +160,8 @@ Each system below has its own table in `server.toml`, and most have a switch tha
 **Lived Properties** (`[lived]`). `enabled` (true), `livedDailyCap` (40), and the tiers `livedFeltUnits` (40), `livedKnownUnits` (200) and `livedSecondNatureUnits` (600). `livedChargeMax` (100) caps the shock charge; 0 turns charge off.
 
 **Maker's Trace** (`[trace]`, see [Maker's Trace](Makers-Trace)). `enabled` (true), `traceStudySeconds` (3), `traceStudyAura` (10), `traceStake` (50), `traceBaseJenny` (40), `traceDailyJenny` (600), `traceChestChance` (0.06), `traceBrushChance` (0.08) and `traceVillagerOffer` (true). Turn `enabled` off for no antiques, no offers, and no study or sale.
+
+**Compatibility** (`[compat]`). `jeiPages` (true) shows Elite HxH's recipe and info pages in JEI, the optional recipe viewer. Turn it off and those pages are not offered; the item list and the crafting recipes stay. It is a courtesy to players, not secrecy: the pages' data ships in the mod, so a modified client can still read it. JEI itself is optional on the server, but with JEI there a pot's click-to-fill button works and datapack crafting recipes reach the clients.
 
 If the server is under load, `fxMaxEntitiesPerLevel` (default 256) caps how many effects exist in one level, and `payloadRateLimit` (default 20) caps how many requests a client can send each second.
 

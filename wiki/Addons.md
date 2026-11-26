@@ -14,26 +14,25 @@ Elite HxH is built as a platform. Other mods, called addons, can add new Nen abi
 
 The public API lives in `com.johnadmin.elitehxh.api`. It is documented, and it is the only part of the mod an addon may use. It is **experimental until Elite HxH 1.0.0**: a minor version can break it, so pin the exact version you built against and read the changelog before you update.
 
-Everything you need is in the mod's repository:
+The mod's source code is not public, and there is no separate API download. You build an addon against the released mod jar:
 
-- `docs/addon-guide.md` is the step-by-step guide. It covers setting up the dependency, writing an ability, writing a vow, client visuals, events, tests and the rules that keep an addon working.
-- `addon-template/` is a complete example addon with its own Gradle build. Copy the folder and start from it.
-- `docs/api-changelog.md` lists every addition, change and removal in the API.
-- `docs/config-reference.md` describes the per-ability sections that server owners use to rebalance your content.
+- Download the mod jar for the version you target from the mod's page, and add it to your NeoForge build as a compile-time dependency and for your run configurations.
+- Use only the classes in `com.johnadmin.elitehxh.api`. The jar holds the rest of the mod too, but everything outside the API is internal and changes without notice.
+- The `addon-template/` folder of this wiki's repository is a complete example addon with its own Gradle build (abilities, a vow, a beast, client visuals and a game test). Copy it and start from it; its README says how to point it at the mod jar.
+- Each version's changelog on the mod's page has a section for addon authors.
 
 A few things worth knowing before you start:
 
-- An addon compiles against the `elitehxh-api` jar only, and runs with the full mod.
 - Elite HxH requires GeckoLib and Curios API (and Player Animation Library on clients), and so does a mod that depends on it.
 - Your addon's advancements can sit in the mod's **Nen** tab by using `elitehxh:nen` as their parent.
 - Nations are readable from addons (who owns a chunk, ranks, relations, trusted players with `Nations.trustAt`, personal and zone nations, and `Nations.mayAct`, the same claim answer the mod uses) and fire events you can listen to or cancel. Code that changes blocks should ask `mayAct` first. Code that hurts an entity asks `mayAct` with `ClaimAction.HURT_ENTITY`, and code that hurts a player asks `Nations.mayHurt(attacker, victim)`, which follows the nation, relation and PvP rules.
-- An addon can add Nen beasts (see [Nen Beasts](Nen-Beasts)): extend `BeastAbility`, and give the beast a body made of a GeckoLib model, five animations and a texture named after its id. The guide's tenth section walks through it.
-- An addon can add a Hunter specialty (see [Hunter Exam](Hunter-Exam)): register a `HunterSpecialty` in the `NEN_HUNTER_SPECIALTY` registry, give it a name key, and credit it with `INenUser.addHunterDeed` or by listening to `HunterDeedEvent` and `HunterStarEvent`. It has no perks of its own and cannot grant a license. The guide's twelfth section walks through it.
-- The guide also covers a mob that carries aura (section 9), an imprint for [Infused Gear](Infused-Gear) (11), a Geas term (13), a Hatsu modifier (14), paying and charging Jenny (15) and Tower Arena events (16).
+- An addon can add Nen beasts (see [Nen Beasts](Nen-Beasts)): extend `BeastAbility`, and give the beast a body made of a GeckoLib model, five animations and a texture named after its id.
+- An addon can add a Hunter specialty (see [Hunter Exam](Hunter-Exam)): register a `HunterSpecialty` in the `NEN_HUNTER_SPECIALTY` registry, give it a name key, and credit it with `INenUser.addHunterDeed` or by listening to `HunterDeedEvent` and `HunterStarEvent`. It has no perks of its own and cannot grant a license.
+- The API also covers mobs that carry aura, imprints for [Infused Gear](Infused-Gear), Geas terms, Hatsu modifiers, paying and charging Jenny (`NenApi.bank`) and Tower Arena events.
 - Do not ship official Hunter x Hunter art, audio or text. Use original assets and translation keys.
 
 ## Using the API
 
-The API license lets you use it to build and run addons. Your addon must not include the API or the mod. See the license file that ships in the API jar, because the license text is still a draft.
+The API license, `LICENSE-API` inside the mod jar, lets you compile against and run with an unmodified mod jar from an official download, to build and run addons. Your addon must not include the API or the mod, and the license gives no access to the mod's source. Read the file itself, because the license text is still a draft.
 
 For the list of pages, go back to [Home](Home).

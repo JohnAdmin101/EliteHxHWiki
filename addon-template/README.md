@@ -1,15 +1,10 @@
 # Example Nen Addon
 
-A starting point for an Elite Hunter X Hunter addon: three abilities (Spark Fist, Spark Burst and the beast Spark Hound, which wears its own wisp body), one vow (Spark Offering), their client visuals (an icon, a sound, cast, hit and running effects) and a game test. It is a complete Gradle build: copy this folder out of the Elite HxH repository and it builds on its own. The full guide is `docs/addon-guide.md` in the Elite HxH repository.
+A starting point for an Elite Hunter X Hunter addon: three abilities (Spark Fist, Spark Burst and the beast Spark Hound, which wears its own wisp body), one vow (Spark Offering), their client visuals (an icon, a sound, cast, hit and running effects) and a game test. It is a complete Gradle build: copy this folder and it builds on its own. The wiki's Addons page has the overview.
 
 ## Get the API
 
-Until Elite HxH's first public release, the API and the mod come from a local Maven repository:
-
-1. In an Elite HxH checkout, run `./gradlew publish`. It writes `repo/` there, with `com/johnadmin/elitehxh/elitehxh-api/0.1.0` (the API, its sources and Javadoc) and `com/johnadmin/elitehxh/elitehxh/0.1.0` (the full mod).
-2. This build reads that folder through the Gradle property `elitehxhRepo`. The default, `../repo`, works while this template sits in the Elite HxH checkout. Elsewhere, pass `-PelitehxhRepo=/path/to/elitehxh/repo` or put `elitehxhRepo=/path/to/elitehxh/repo` in `~/.gradle/gradle.properties`.
-
-After the release, replace the `EliteHxH` repository in `build.gradle` with the published one.
+Elite HxH's source is not public, and there is no separate API jar: an addon compiles against the released mod jar. This build reads it from a local Maven repository through the Gradle property `elitehxhRepo` (default `../repo`), at `com/johnadmin/elitehxh/elitehxh/<version>/elitehxh-<version>.jar`. Pass `-PelitehxhRepo=/path/to/repo` or put `elitehxhRepo=/path/to/repo` in `~/.gradle/gradle.properties`.
 
 ## Build and run
 
@@ -25,6 +20,6 @@ After the release, replace the `EliteHxH` repository in `build.gradle` with the 
 
 ## Rules
 
-- Compile against `elitehxh-api` only. Nothing outside `com.johnadmin.elitehxh.api` is supported, and this build cannot even see it.
-- The API is licensed under `LICENSE-API`, inside the API jar: you may use it to build and run addons, and you may not ship the API or the mod with your addon.
+- Use `com.johnadmin.elitehxh.api` only. The mod jar holds everything else too, but nothing outside the API is supported, and it changes without notice.
+- The API is licensed under `LICENSE-API`, inside the mod jar: you may use it to build and run addons, and you may not ship the API or the mod with your addon.
 - The Gradle files derive from NeoForge's MDK, under `TEMPLATE_LICENSE.txt`. The example code currently carries no license grant. Whether to grant one is the author's open decision.

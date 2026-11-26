@@ -21,7 +21,7 @@ A tile that is lost goes back to the pool, and its number can be found again by 
 - It despawns while lying on the ground.
 - It is destroyed by something that harms items, such as a cactus. Fire, lava and explosions do not hurt it.
 - It falls into the void.
-- It is removed by a command such as `/kill @e[type=item]`, or a mob carrying it vanishes without dropping it.
+- It is removed by a command such as `/kill @e[type=item]`, `/clear` or `/item replace`, or a mob, item frame or armor stand holding it vanishes without dropping it.
 - It is left in a [Tower Arena](Tower-Arena) ring when the match ends. A tile tossed or dropped there is not handed back, and a tile cannot be staked in a duel.
 
 A tile will not go into an ender chest, a shulker box or a bundle. One that is somehow already in your ender chest is thrown out at your feet when you open it or log in ("It will not go in.").

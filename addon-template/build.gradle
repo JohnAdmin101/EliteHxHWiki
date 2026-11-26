@@ -101,11 +101,10 @@ neoForge {
 neoForge.addModdingDependenciesTo(sourceSets.gametest)
 
 dependencies {
-    // Compile against Elite HxH's API only: anything outside it does not compile, so the addon keeps working across the
-    // Elite HxH releases its compatibility rules cover.
-    compileOnly "${elitehxh_group}:elitehxh-api:${elitehxh_version}"
-    gametestCompileOnly "${elitehxh_group}:elitehxh-api:${elitehxh_version}"
-    // The full mod, so the run configurations load it (GeckoLib comes with it).
+    // Elite HxH's released mod jar: compile against it and load it in the run configurations (GeckoLib comes with it).
+    // Use only com.johnadmin.elitehxh.api: everything else in the jar is internal and changes without notice.
+    compileOnly "${elitehxh_group}:elitehxh:${elitehxh_version}"
+    gametestCompileOnly "${elitehxh_group}:elitehxh:${elitehxh_version}"
     runtimeOnly "${elitehxh_group}:elitehxh:${elitehxh_version}"
 }
 

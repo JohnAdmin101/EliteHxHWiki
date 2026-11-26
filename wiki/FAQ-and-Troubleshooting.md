@@ -137,6 +137,9 @@ Re-rolling a type is switched off by default. The server owner has to allow it.
 **Another player is trying to awaken me.**
 Forced awakening shows you a popup, and nothing happens unless you accept. Escape declines it. The player has to be Nen level 10 or higher, with Ren on.
 
+**Does the mod work with JEI?**
+Yes, and JEI is optional. With it installed, Nen Manuals and Type Primers list one entry each, the Aura Pot and the Meditation Stone's inscription have their own recipe pages (the pot's page has a button that fills its three slots), and the "i" tab on about fifty items gives a short note on what they are for. A server owner can switch the recipe and info pages off, see [Server Owners](Server-Owners).
+
 ## Still stuck?
 
 Ask on the mod's page. Say what you did, what you expected and what you saw, and attach `logs/latest.log` if the game crashed.
